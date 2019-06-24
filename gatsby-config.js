@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Diogo Torres Correia`,
+    shortTitle: `Diogo Correia`,
     description: `Hey, I'm Diogo Torres Correia from Portugal. I love programming, running, taking photos and learning new things!`,
     author: `@diogotc2002`,
   },
@@ -32,13 +33,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-plugin-material-ui",
-      // If you want to use styled components you should change the injection order.
+      resolve: 'gatsby-plugin-material-ui',
       options: {
-        // stylesProvider: {
-        //   injectFirst: true,
-        // },
+        stylesProvider: {
+          injectFirst: true,
+        },
       },
     },
   ],
-}
+};
