@@ -10,6 +10,7 @@ import classnames from 'classnames';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,21 +35,25 @@ const Header = ({ siteTitle, viewportHeight }) => {
   return (
     <AppBar className={classnames({ [classes.root]: true, [classes.rootSplash]: !trigger })}>
       <Toolbar>
-        <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
-          <MenuIcon />
-        </IconButton>
+        <Hidden smUp>
+          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
+            <MenuIcon />
+          </IconButton>
+        </Hidden>
         <Typography variant='h6' className={classes.title}>
           {siteTitle}
         </Typography>
-        <Button component={Link} to='' color='inherit'>
-          About me
-        </Button>
-        <Button component={Link} to='' color='inherit'>
-          Portfolio
-        </Button>
-        <Button component={Link} to='' color='inherit'>
-          Contact me
-        </Button>
+        <Hidden xsDown>
+          <Button component={Link} to='' color='inherit'>
+            About me
+          </Button>
+          <Button component={Link} to='' color='inherit'>
+            Portfolio
+          </Button>
+          <Button component={Link} to='' color='inherit'>
+            Contact me
+          </Button>
+        </Hidden>
       </Toolbar>
     </AppBar>
   );
