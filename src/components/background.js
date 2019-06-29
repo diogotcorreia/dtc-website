@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-
 import Particles from 'react-particles-js';
+import styled from 'styled-components';
 
 const ParticlesBackground = ({ className }) => (
   <Particles
@@ -15,6 +14,7 @@ const ParticlesBackground = ({ className }) => (
           value: 3,
         },
       },
+      retina_detect: false,
     }}
   />
 );

@@ -6,6 +6,14 @@ module.exports = {
     author: `@diogotc2002`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-top-layout`,
     `gatsby-plugin-react-helmet`,
     {
