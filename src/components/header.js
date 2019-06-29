@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = ({ siteTitle, viewportHeight }) => {
+const Header = ({ siteTitle }) => {
   const classes = useStyles();
-  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: viewportHeight - 64 });
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 100 });
   return (
     <AppBar className={classnames({ [classes.root]: true, [classes.rootSplash]: !trigger })}>
       <Toolbar>
@@ -67,29 +67,4 @@ Header.defaultProps = {
   siteTitle: ``,
 };
 
-class AutoHeight extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { height: 0 };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-  }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({ height: window.innerHeight });
-  }
-
-  render() {
-    return <Header viewportHeight={this.state.height} {...this.props} />;
-  }
-}
-
-export default AutoHeight;
+export default Header;

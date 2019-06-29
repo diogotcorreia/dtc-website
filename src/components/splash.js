@@ -54,7 +54,7 @@ class Splash extends Component {
           </Helmet>
           <ProfileImage className={classes.picture} />
           <Typography variant='h1' className={classnames(classes.text, classes.title)}>
-            Diogo Torres Correia
+            Diogo Correia
           </Typography>
           <Typography variant='h4' className={classnames(classes.text, classes.subtitle)}>
             Student, Developer &amp; Runner
