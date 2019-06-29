@@ -8,9 +8,15 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import classnames from 'classnames';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    transition: 'all 250ms',
+  },
+  rootSplash: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
   },
@@ -24,8 +30,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: window.innerHeight - 64 });
   return (
-    <AppBar position='static' className={classes.root}>
+    <AppBar className={classnames({ [classes.root]: true, [classes.rootSplash]: !trigger })}>
       <Toolbar>
         <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
           <MenuIcon />

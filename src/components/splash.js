@@ -7,7 +7,7 @@ import classnames from 'classnames';
 
 const styles = (theme) => ({
   root: {
-    minHeight: 'calc(100vh - 64px)',
+    minHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
