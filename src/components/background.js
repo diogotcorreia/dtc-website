@@ -1,47 +1,32 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
-import BackgroundImage from 'gatsby-background-image';
+import Particles from 'react-particles-js';
 
-const BackgroundSection = ({ className, children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        desktop: file(relativePath: { eq: "parallax-fullres.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 4640) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => {
-      // Set ImageData.
-      const imageData = data.desktop.childImageSharp.fluid;
-      return (
-        <BackgroundImage
-          Tag='section'
-          className={className}
-          fluid={imageData}
-          backgroundColor={`#1E88E5`}
-          style={{ backgroundAttachment: 'fixed' }}
-        >
-          {children}
-        </BackgroundImage>
-      );
+const ParticlesBackground = ({ className }) => (
+  <Particles
+    className={className}
+    params={{
+      particles: {
+        number: {
+          value: 50,
+        },
+        size: {
+          value: 3,
+        },
+      },
     }}
   />
 );
 
-const StyledBackgroundSection = styled(BackgroundSection)`
-  width: 100%;
-  min-height: 100vh;
-  background-position: bottom center;
-  background-repeat: repeat-y;
-  background-size: cover;
-  overflow: auto;
+const StyledParticlesBackground = styled(ParticlesBackground)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #181f1b;
+  z-index: -10;
 `;
 
-export default StyledBackgroundSection;
+export default StyledParticlesBackground;

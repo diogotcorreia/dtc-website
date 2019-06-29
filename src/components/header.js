@@ -11,6 +11,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -23,27 +25,25 @@ const useStyles = makeStyles((theme) => ({
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
   return (
-    <header className={classes.root}>
-      <AppBar position='static'>
-        <Toolbar>
-          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant='h6' className={classes.title}>
-            {siteTitle}
-          </Typography>
-          <Button component={Link} to='' color='inherit'>
-            About me
-          </Button>
-          <Button component={Link} to='' color='inherit'>
-            Portfolio
-          </Button>
-          <Button component={Link} to='' color='inherit'>
-            Contact me
-          </Button>
-        </Toolbar>
-      </AppBar>
-    </header>
+    <AppBar position='static' className={classes.root}>
+      <Toolbar>
+        <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
+          <MenuIcon />
+        </IconButton>
+        <Typography variant='h6' className={classes.title}>
+          {siteTitle}
+        </Typography>
+        <Button component={Link} to='' color='inherit'>
+          About me
+        </Button>
+        <Button component={Link} to='' color='inherit'>
+          Portfolio
+        </Button>
+        <Button component={Link} to='' color='inherit'>
+          Contact me
+        </Button>
+      </Toolbar>
+    </AppBar>
   );
 };
 
