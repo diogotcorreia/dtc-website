@@ -5,20 +5,21 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Splash from '../components/splash';
-const useStyles = makeStyles({
+import SectionTitle from '../components/sectionTitle';
+
+const useStyles = makeStyles((theme) => ({
   section: {
     background: '#fff',
-  },
-  aboutmeContainer: {
     paddingTop: 24,
     paddingBottom: 24,
+    boxShadow: theme.shadows[2],
   },
   aboutme: {
     fontWeight: 300,
     padding: '1rem 0',
     fontSize: '1.5rem',
   },
-});
+}));
 
 const IndexPage = ({ data }) => {
   const classes = useStyles();
@@ -34,6 +35,7 @@ const IndexPage = ({ data }) => {
           />
         </Container>
       </Box>
+      <SectionTitle title='Portfolio' />
     </Layout>
   );
 };
