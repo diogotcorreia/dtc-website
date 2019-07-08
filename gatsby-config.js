@@ -31,9 +31,9 @@ module.exports = {
         name: `Diogo Torres Correia`,
         short_name: `Diogo Correia`,
         start_url: `/`,
-        background_color: `#181f1b`,
-        theme_color: `#181f1b`,
-        display: `minimal-ui`,
+        background_color: `#1b1b1b`,
+        theme_color: `#1b1b1b`,
+        display: `fullscreen`,
         icon: `src/images/profile-fullres-cropped.jpg`, // This path is relative to the root of the site.
       },
     },
