@@ -25,7 +25,7 @@ const StyledParticlesBackground = styled(ParticlesBackground)`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #181f1b;
+  background: #1b1b1b;
   z-index: -10;
 `;
 
