@@ -11,6 +11,7 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.8.4",
     "gatsby-background-image": "^0.7.3",
+    "gatsby-cli": "^2.7.8",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-material-ui": "^2.0.1",
@@ -44,7 +45,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",

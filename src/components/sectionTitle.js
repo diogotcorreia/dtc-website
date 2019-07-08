@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
@@ -9,7 +10,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     flexDirection: 'column',
   },
-  h2: {
+  title: {
     marginBottom: 0,
   },
 });
@@ -18,7 +19,9 @@ const SectionTitle = ({ title }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <h2 className={classes.h2}>{title}</h2>
+      <Typography variant='h4' className={classes.title}>
+        {title}
+      </Typography>
     </div>
   );
 };
