@@ -121,7 +121,7 @@ class Splash extends Component {
 
 const Icon = ({ component, tooltip, ...props }) => (
   <Tooltip title={tooltip} interactive>
-    <a target={props.href === '#!' ? '_self' : '_blank'} {...props}>
+    <a target={props.href === '#!' ? '_self' : '_blank'} rel='noopener' {...props}>
       {component}
     </a>
   </Tooltip>

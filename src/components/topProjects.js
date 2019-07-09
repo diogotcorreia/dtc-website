@@ -23,6 +23,7 @@ const TopProjects = ({ topProjects }) => {
           content={project.html}
           icon={project.frontmatter.icon.childImageSharp.fixed}
           link={project.frontmatter.link}
+          calltoaction={project.frontmatter.calltoaction}
         />
       ))}
     </div>
@@ -49,7 +50,7 @@ const useStylesProject = makeStyles((theme) => ({
   },
 }));
 
-const Project = ({ name, content, icon, link }) => {
+const Project = ({ name, content, icon, link, calltoaction }) => {
   const classes = useStylesProject();
   return (
     <Card className={classes.root}>
@@ -60,7 +61,7 @@ const Project = ({ name, content, icon, link }) => {
       </CardContent>
       <CardActions>
         <Button color='secondary' size='small' component={Link} href={link}>
-          Learn More
+          {calltoaction}
         </Button>
       </CardActions>
     </Card>
@@ -68,7 +69,7 @@ const Project = ({ name, content, icon, link }) => {
 };
 
 const Link = ({ children, ...props }) => (
-  <a target='_blank' {...props}>
+  <a target='_blank' rel='noopener' {...props}>
     {children}
   </a>
 );

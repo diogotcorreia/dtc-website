@@ -73,6 +73,7 @@ export const query = graphql`
         frontmatter {
           name
           link
+          calltoaction
           icon {
             childImageSharp {
               fixed(width: 80, height: 80) {

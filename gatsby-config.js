@@ -55,5 +55,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://diogotc.com',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 };
