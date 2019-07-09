@@ -83,7 +83,8 @@ class Splash extends Component {
             <Icon
               tooltip='Rexcantor64#7413'
               component={<DiscordIcon className={classes.icon} />}
-              href='#!'
+              // eslint-disable-next-line
+              href='javascript:void(0);'
             />
             <Icon
               tooltip='Diogo Correia'
@@ -113,8 +114,8 @@ class Splash extends Component {
 }
 
 const Icon = ({ component, tooltip, ...props }) => (
-  <Tooltip title={tooltip} interactive>
-    <a target={props.href === '#!' ? '_self' : '_blank'} rel='noopener' {...props}>
+  <Tooltip title={tooltip} interactive enterTouchDelay={0}>
+    <a target='_blank' rel='noopener' {...props}>
       {component}
     </a>
   </Tooltip>
