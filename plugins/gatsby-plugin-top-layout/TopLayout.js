@@ -13,10 +13,6 @@ export default function TopLayout(props) {
           name='viewport'
           content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no'
         />
-        <link
-          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap'
-          rel='stylesheet'
-        />
       </Helmet>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

@@ -1,17 +1,16 @@
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/styles';
 import classnames from 'classnames';
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
+import DiscordIcon from '../assets/discord.svg';
 import GitHubIcon from '../assets/github.svg';
 import MailIcon from '../assets/gmail.svg';
 import InstagramIcon from '../assets/instagram.svg';
 import SteamIcon from '../assets/steam.svg';
 import StravaIcon from '../assets/strava.svg';
 import TwitterIcon from '../assets/twitter.svg';
-import DiscordIcon from '../assets/discord.svg';
 import ProfileImage from './profileImage';
-import Tooltip from '@material-ui/core/Tooltip';
 
 const styles = (theme) => ({
   root: {
@@ -63,12 +62,6 @@ class Splash extends Component {
     return (
       <div className={classes.root}>
         <div className={classes.container}>
-          <Helmet>
-            <link
-              href='https://fonts.googleapis.com/css?family=Nunito&display=swap&text=DiogoTorresCorreia'
-              rel='stylesheet'
-            />
-          </Helmet>
           <ProfileImage className={classes.picture} />
           <Typography variant='h1' className={classnames(classes.text, classes.title)}>
             Diogo Correia

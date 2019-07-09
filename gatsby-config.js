@@ -63,5 +63,20 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`300`, `400`, `500`],
+          },
+          {
+            family: `Nunito`,
+            text: 'DiogoCorreia',
+          },
+        ],
+      },
+    },
   ],
 };
