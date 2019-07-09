@@ -24,6 +24,8 @@ const TopProjects = ({ topProjects }) => {
           icon={project.frontmatter.icon.childImageSharp.fixed}
           link={project.frontmatter.link}
           calltoaction={project.frontmatter.calltoaction}
+          background={project.frontmatter.background}
+          color={project.frontmatter.color}
         />
       ))}
     </div>
@@ -31,7 +33,7 @@ const TopProjects = ({ topProjects }) => {
 };
 
 const useStylesProject = makeStyles((theme) => ({
-  root: {
+  root: (props) => ({
     flex: '1 1 auto',
     [theme.breakpoints.down('xs')]: {
       maxWidth: 'initial',
@@ -40,7 +42,9 @@ const useStylesProject = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     margin: 10,
-  },
+    backgroundColor: props.background,
+    color: theme.palette.getContrastText(props.background),
+  }),
   image: {
     margin: '0 auto 10px auto',
     display: 'block !important',
@@ -48,10 +52,13 @@ const useStylesProject = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
   },
+  calltoaction: (props) => ({
+    color: props.color,
+  }),
 }));
 
-const Project = ({ name, content, icon, link, calltoaction }) => {
-  const classes = useStylesProject();
+const Project = ({ name, content, icon, link, calltoaction, background, color }) => {
+  const classes = useStylesProject({ background, color });
   return (
     <Card className={classes.root}>
       <CardContent className={classes.content}>
@@ -60,7 +67,7 @@ const Project = ({ name, content, icon, link, calltoaction }) => {
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </CardContent>
       <CardActions>
-        <Button color='secondary' size='small' component={Link} href={link}>
+        <Button className={classes.calltoaction} size='small' component={Link} href={link}>
           {calltoaction}
         </Button>
       </CardActions>

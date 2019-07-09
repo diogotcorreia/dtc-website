@@ -4,6 +4,8 @@ icon: ./triton.png
 order: 0
 link: https://triton.rexcantor64.com
 calltoaction: Visit Website
+background: '#008ff8'
+color: '#fff'
 ---
 
 Triton is a Spigot plugin for Minecraft that enables a Minecraft server to send messages in the player's language.  

@@ -74,6 +74,8 @@ export const query = graphql`
           name
           link
           calltoaction
+          background
+          color
           icon {
             childImageSharp {
               fixed(width: 80, height: 80) {
