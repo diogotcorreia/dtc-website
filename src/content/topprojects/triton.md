@@ -4,7 +4,7 @@ icon: ./triton.png
 order: 0
 link: https://triton.rexcantor64.com
 calltoaction: Visit Website
-background: '#008ff8'
+background: '#0a74db'
 color: '#fff'
 ---
 
