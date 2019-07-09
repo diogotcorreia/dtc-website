@@ -4,6 +4,7 @@ module.exports = {
     shortTitle: `Diogo Correia`,
     description: `Hey, I'm Diogo Torres Correia from Portugal. I love programming, running, taking photos and learning new things!`,
     author: `@diogotc2002`,
+    siteUrl: 'https://diogotc.com',
   },
   plugins: [
     {
