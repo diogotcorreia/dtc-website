@@ -8,15 +8,15 @@ const Image = ({ className }) => (
       query {
         placeholderImage: file(relativePath: { eq: "profile-fullres-cropped.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_withWebp
+            fixed(width: 100, height: 100) {
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
       }
     `}
     render={(data) => (
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} className={className} />
+      <Img fixed={data.placeholderImage.childImageSharp.fixed} className={className} />
     )}
   />
 );
