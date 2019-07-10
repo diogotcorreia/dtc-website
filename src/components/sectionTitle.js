@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    margin: '75px 0',
+    padding: '75px 0',
     color: '#fff',
     display: 'flex',
     alignItems: 'center',
@@ -15,10 +15,10 @@ const useStyles = makeStyles({
   },
 });
 
-const SectionTitle = ({ title }) => {
+const SectionTitle = ({ title, ...props }) => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} {...props}>
       <Typography variant='h4' className={classes.title}>
         {title}
       </Typography>

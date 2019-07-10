@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/styles';
 import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
+import SectionTitle from '../components/sectionTitle';
 import SEO from '../components/seo';
 import Splash from '../components/splash';
-import SectionTitle from '../components/sectionTitle';
 import TopProjects from '../components/topProjects';
 
 const useStyles = makeStyles((theme) => ({
@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme) => ({
 const IndexPage = ({ data }) => {
   const classes = useStyles();
   return (
-    <Layout>
+    <Layout homepage>
       <SEO title='Home' />
       <Splash />
-      <Box className={classes.section}>
+      <Box className={classes.section} id='aboutme'>
         <Container>
           <div
             className={classes.aboutme}
@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
           />
         </Container>
       </Box>
-      <SectionTitle title='Portfolio' />
+      <SectionTitle title='Portfolio' id='portfolio' />
       <Box className={classes.section}>
         <Container>
           <Typography className={classes.topProjectsTitle} variant='h5'>

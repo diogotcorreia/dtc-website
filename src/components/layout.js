@@ -12,7 +12,7 @@ import Background from './background';
 import Header from './header';
 import './layout.css';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, homepage }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,8 +26,8 @@ const Layout = ({ children }) => (
     render={(data) => (
       <>
         <Background />
-        <Header siteTitle={data.site.siteMetadata.shortTitle} />
-        <main>{children}</main>
+        <Header siteTitle={data.site.siteMetadata.shortTitle} homepage={homepage} />
+        <main id='top'>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

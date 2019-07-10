@@ -67,18 +67,19 @@ const Project = ({ name, content, icon, link, calltoaction, background, color })
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </CardContent>
       <CardActions>
-        <Button className={classes.calltoaction} size='small' component={Link} href={link}>
+        <Button
+          className={classes.calltoaction}
+          size='small'
+          component='a'
+          href={link}
+          target='_blank'
+          rel='noopener'
+        >
           {calltoaction}
         </Button>
       </CardActions>
     </Card>
   );
 };
-
-const Link = ({ children, ...props }) => (
-  <a target='_blank' rel='noopener' {...props}>
-    {children}
-  </a>
-);
 
 export default TopProjects;

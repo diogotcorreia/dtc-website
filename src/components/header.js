@@ -1,3 +1,4 @@
+import { Hidden } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
@@ -10,7 +11,7 @@ import classnames from 'classnames';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Hidden } from '@material-ui/core';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,10 +27,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    color: theme.palette.primary.contrastText,
+    textDecoration: 'none',
   },
 }));
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, homepage }) => {
   const classes = useStyles();
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 100 });
   return (
@@ -40,18 +43,24 @@ const Header = ({ siteTitle }) => {
             <MenuIcon />
           </IconButton>
         </Hidden>
-        <Typography variant='h6' className={classes.title}>
+        <Typography
+          variant='h6'
+          component={homepage ? AnchorLink : Link}
+          href='#top'
+          to='/'
+          className={classes.title}
+        >
           {siteTitle}
         </Typography>
         <Hidden xsDown>
-          <Button component={Link} to='' color='inherit'>
+          <Button component={AnchorLink} offset='64' href='#aboutme' color='inherit'>
             About me
           </Button>
-          <Button component={Link} to='' color='inherit'>
+          <Button component={AnchorLink} offset='64' href='#portfolio' color='inherit'>
             Portfolio
           </Button>
-          <Button component={Link} to='' color='inherit'>
-            Contact me
+          <Button component={Link} to='/impossiblelist' color='inherit'>
+            Impossible List
           </Button>
         </Hidden>
       </Toolbar>
