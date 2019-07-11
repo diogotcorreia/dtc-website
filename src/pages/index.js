@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import SectionTitle from '../components/sectionTitle';
 import SEO from '../components/seo';
 import Splash from '../components/splash';
+import Timeline from '../components/timeline';
 import TopProjects from '../components/topProjects';
 
 const useStyles = makeStyles((theme) => ({
@@ -48,6 +49,10 @@ const IndexPage = ({ data }) => {
             My top projects
           </Typography>
           <TopProjects topProjects={data.topProjects.nodes} />
+          <Typography className={classes.topProjectsTitle} variant='h5'>
+            Timeline
+          </Typography>
+          <Timeline />
         </Container>
       </Box>
     </Layout>
