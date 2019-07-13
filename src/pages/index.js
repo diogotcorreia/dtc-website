@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
           <Typography className={classes.topProjectsTitle} variant='h5'>
             Timeline
           </Typography>
-          <Timeline />
+          <Timeline data={data.timeline.nodes}/>
         </Container>
       </Box>
     </Layout>
@@ -88,6 +88,23 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    timeline: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/timeline/" }
+        internal: { type: { eq: "MarkdownRemark" } }
+      }
+      sort: { fields: frontmatter___order, order: DESC }
+    ) {
+      nodes {
+        html
+        frontmatter {
+          title
+          subtitle
+          date
+          iconName
         }
       }
     }
