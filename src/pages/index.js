@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     padding: '1rem 0',
     fontSize: '1.5rem',
   },
-  topProjectsTitle: {
+  subsectionTitle: {
     textAlign: 'center',
-    marginBottom: 20,
+    margin: '20px 0',
     fontWeight: 500,
   },
 }));
@@ -45,14 +45,14 @@ const IndexPage = ({ data }) => {
       <SectionTitle title='Portfolio' id='portfolio' />
       <Box className={classes.section}>
         <Container>
-          <Typography className={classes.topProjectsTitle} variant='h5'>
+          <Typography className={classes.subsectionTitle} variant='h5'>
             My top projects
           </Typography>
           <TopProjects topProjects={data.topProjects.nodes} />
-          <Typography className={classes.topProjectsTitle} variant='h5'>
+          <Typography className={classes.subsectionTitle} variant='h5'>
             Timeline
           </Typography>
-          <Timeline data={data.timeline.nodes}/>
+          <Timeline data={data.timeline.nodes} />
         </Container>
       </Box>
     </Layout>
@@ -96,7 +96,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/timeline/" }
         internal: { type: { eq: "MarkdownRemark" } }
       }
-      sort: { fields: frontmatter___order, order: DESC }
+      sort: { fields: frontmatter___order, order: ASC }
     ) {
       nodes {
         html
@@ -105,6 +105,8 @@ export const query = graphql`
           subtitle
           date
           iconName
+          background
+          foreground
         }
       }
     }

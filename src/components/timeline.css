@@ -28,8 +28,8 @@
   background-image: linear-gradient(
     to bottom,
     white 0px,
-    #1b1b1b 20px,
-    #1b1b1b calc(100% - 40px),
+    #1b1b1b 30px,
+    #1b1b1b calc(100% - 30px),
     white
   );
   border-radius: 4px;
@@ -84,7 +84,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  /*box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);*/
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 .vertical-timeline-element-icon svg {
   fill: currentColor;
@@ -216,6 +217,12 @@
 .vertical-timeline-element-content p {
   margin: 1em 0 0;
   line-height: 1.6;
+  font-weight: 400;
+}
+.vertical-timeline-element-content a {
+  text-decoration: none;
+  color: #037daf;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .vertical-timeline-element-title {
