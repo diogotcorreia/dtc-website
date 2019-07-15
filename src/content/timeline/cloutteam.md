@@ -3,7 +3,7 @@ title: Clout Team
 subtitle: My first experience working as a team
 date: 'July 2016'
 order: 2
-iconName: 'gamepad-variant'
+iconName: 'account-group'
 background: '#fff'
 foreground: '#000'
 ---
