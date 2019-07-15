@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import SectionTitle from '../components/sectionTitle';
 import SEO from '../components/seo';
 import Splash from '../components/splash';
+import Timeline from '../components/timeline';
 import TopProjects from '../components/topProjects';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     padding: '1rem 0',
     fontSize: '1.5rem',
   },
-  topProjectsTitle: {
+  subsectionTitle: {
     textAlign: 'center',
-    marginBottom: 20,
+    margin: '20px 0',
     fontWeight: 500,
   },
 }));
@@ -44,10 +45,14 @@ const IndexPage = ({ data }) => {
       <SectionTitle title='Portfolio' id='portfolio' />
       <Box className={classes.section}>
         <Container>
-          <Typography className={classes.topProjectsTitle} variant='h5'>
+          <Typography className={classes.subsectionTitle} variant='h5'>
             My top projects
           </Typography>
           <TopProjects topProjects={data.topProjects.nodes} />
+          <Typography className={classes.subsectionTitle} variant='h5'>
+            Timeline
+          </Typography>
+          <Timeline data={data.timeline.nodes} />
         </Container>
       </Box>
     </Layout>
@@ -83,6 +88,25 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    timeline: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/timeline/" }
+        internal: { type: { eq: "MarkdownRemark" } }
+      }
+      sort: { fields: frontmatter___order, order: ASC }
+    ) {
+      nodes {
+        html
+        frontmatter {
+          title
+          subtitle
+          date
+          iconName
+          background
+          foreground
         }
       }
     }
