@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Background from './background';
 import Header from './header';
+import Footer from './footer';
 import './layout.css';
 
 const Layout = ({ children, homepage }) => (
@@ -28,11 +29,7 @@ const Layout = ({ children, homepage }) => (
         <Background />
         <Header siteTitle={data.site.siteMetadata.shortTitle} homepage={homepage} />
         <main id='top'>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>
-        </footer>
+        <Footer homepage={homepage} />
       </>
     )}
   />
