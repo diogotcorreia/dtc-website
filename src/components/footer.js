@@ -44,7 +44,7 @@ const Footer = ({ homepage }) => {
     <footer className={classes.root}>
       <Container>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Typography variant='h5' className={classes.header}>
               Contact me
             </Typography>
@@ -72,7 +72,7 @@ const Footer = ({ homepage }) => {
               </Typography>
             </ul>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Typography variant='h5' className={classes.header}>
               Site map
             </Typography>
