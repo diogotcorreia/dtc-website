@@ -5,27 +5,26 @@
   "version": "3.0.0",
   "author": "Diogo Correia <me@diogotc.com>",
   "dependencies": {
-    "@material-ui/core": "^4.1.2",
+    "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
-    "@material-ui/styles": "^4.1.2",
+    "@material-ui/styles": "^4.2.1",
     "classnames": "^2.2.6",
     "dayjs": "^1.8.15",
-    "gatsby": "^2.8.4",
-    "gatsby-background-image": "^0.7.3",
-    "gatsby-cli": "^2.7.8",
-    "gatsby-image": "^2.1.2",
-    "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-material-ui": "^2.0.1",
-    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby": "^2.13.28",
+    "gatsby-cli": "^2.7.15",
+    "gatsby-image": "^2.2.6",
+    "gatsby-plugin-manifest": "^2.2.3",
+    "gatsby-plugin-material-ui": "^2.1.4",
+    "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
-    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sharp": "^2.1.3",
-    "gatsby-source-filesystem": "^2.1.1",
+    "gatsby-plugin-sharp": "^2.2.8",
+    "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-json": "^2.2.2",
-    "gatsby-transformer-remark": "^2.5.0",
-    "gatsby-transformer-sharp": "^2.1.21",
+    "gatsby-transformer-remark": "^2.6.6",
+    "gatsby-transformer-sharp": "^2.2.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -38,7 +37,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby",
@@ -57,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/diogotcorreia/dtc-website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/diogotcorreia/dtc-website/issues"
   }
 }
