@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/styles';
-import { format, getDate } from 'date-fns';
+import dayjs from 'dayjs';
 import React from 'react';
 
 const useStyles = makeStyles({
@@ -155,12 +155,12 @@ const convertTime = (value) => {
 };
 
 const formatDate = (date) => {
-  var d = new Date(date);
+  var d = dayjs(date);
   return (
     <span>
-      {getDate(d)}
-      <sup>{nth(getDate(d))}</sup>
-      {format(d, ' MMMM YYYY')}
+      {d.date()}
+      <sup>{nth(d.date())}</sup>
+      {d.format(' MMMM YYYY')}
     </span>
   );
 };
