@@ -1,23 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import styled from 'styled-components';
 
-const ParticlesBackground = ({ className }) => (
-  <Particles
-    className={className}
-    params={{
-      particles: {
-        number: {
-          value: 50,
-        },
-        size: {
-          value: 3,
-        },
-      },
-      retina_detect: false,
-    }}
-  />
-);
+class ParticlesBackground extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { mobile: false };
+  }
+
+  updateMobileStatus = () => {
+    var newValue = window.innerWidth < 600;
+    if (newValue !== this.state.mobile) this.setState({ mobile: newValue });
+  };
+
+  componentDidMount() {
+    this.updateMobileStatus();
+    window.addEventListener('resize', this.updateMobileStatus);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateMobileStatus);
+  }
+
+  render() {
+    const { className } = this.props;
+    return (
+      <Particles
+        className={className}
+        params={{
+          particles: {
+            number: {
+              value: this.state.mobile ? 20 : 50,
+            },
+            size: {
+              value: 3,
+            },
+          },
+          retina_detect: false,
+        }}
+      />
+    );
+  }
+}
 
 const StyledParticlesBackground = styled(ParticlesBackground)`
   position: fixed;
