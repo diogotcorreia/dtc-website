@@ -36,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     fontSize: '0.80rem',
   },
+  sitemapLink: {
+    padding: '4px 0',
+    color: 'red',
+  },
 }));
 
 const Footer = ({ homepage }) => {
@@ -77,7 +81,7 @@ const Footer = ({ homepage }) => {
               Site map
             </Typography>
             <ul className={classes.list}>
-              <Typography variant='body2' component='li'>
+              <Typography variant='body2' component='li' className={classes.sitemapLink}>
                 {homepage ? (
                   <AnchorLink offset='64' href='#aboutme'>
                     About me
@@ -86,7 +90,7 @@ const Footer = ({ homepage }) => {
                   <Link to='/#aboutme'>About me</Link>
                 )}
               </Typography>
-              <Typography variant='body2' component='li'>
+              <Typography variant='body2' component='li' className={classes.sitemapLink}>
                 {homepage ? (
                   <AnchorLink offset='64' href='#portfolio'>
                     Portfolio
@@ -95,7 +99,7 @@ const Footer = ({ homepage }) => {
                   <Link to='/#portfolio'>Portfolio</Link>
                 )}
               </Typography>
-              <Typography variant='body2' component='li'>
+              <Typography variant='body2' component='li' className={classes.sitemapLink}>
                 <Link to='/impossiblelist'>Impossible List</Link>
               </Typography>
             </ul>
