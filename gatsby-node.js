@@ -1,7 +1,16 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`);
+const data = require('./src/content/shortlink.json');
 
-// You can delete this file if you're not using it
+exports.createPages = ({ actions }) => {
+  const { createPage } = actions;
+
+  const template = path.resolve('./src/components/shortlink.js');
+
+  data.forEach((shortlink) => {
+    createPage({
+      path: shortlink.path,
+      component: template,
+      context: shortlink.link,
+    });
+  });
+};
