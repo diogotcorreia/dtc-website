@@ -31,7 +31,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-particle-animation": "^1.0.1",
-    "react-particles-js": "2.4.2",
+    "react-particles-js": "^2.7.0",
     "react-vertical-timeline-component": "^2.4.0",
     "styled-components": "^4.3.2",
     "styled-media-query": "^2.1.2"

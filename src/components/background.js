@@ -28,6 +28,7 @@ class ParticlesBackground extends Component {
       <Particles
         className={className}
         params={{
+          fps_limit: 30,
           particles: {
             number: {
               value: this.state.mobile ? 20 : 50,
