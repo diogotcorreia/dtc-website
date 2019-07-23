@@ -28,7 +28,6 @@ class ParticlesBackground extends Component {
       <Particles
         className={className}
         params={{
-          fps_limit: 30,
           particles: {
             number: {
               value: this.state.mobile ? 20 : 50,
@@ -37,7 +36,7 @@ class ParticlesBackground extends Component {
               value: 3,
             },
           },
-          retina_detect: false,
+          retina_detect: true,
         }}
       />
     );
