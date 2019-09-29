@@ -4,28 +4,6 @@
     "goals": [
       {
         "type": 0,
-        "name": "Run 4km",
-        "edits": [
-          {
-            "date": "2018-06-11",
-            "link": "https://www.strava.com/activities/1632347862",
-            "value": 949.0
-          },
-          {
-            "date": "2018-11-25",
-            "link": "https://www.strava.com/activities/1983697605",
-            "value": 935.0
-          },
-          {
-            "date": "2019-04-07",
-            "link": "https://www.strava.com/activities/2271469778",
-            "value": 902.0
-          }
-        ],
-        "subgoals": [930, 900]
-      },
-      {
-        "type": 0,
         "name": "Run 5km",
         "edits": [
           {
@@ -37,6 +15,11 @@
             "date": "2018-12-31",
             "link": "https://www.strava.com/activities/2047123379",
             "value": 1153.0
+          },
+          {
+            "date": "2019-06-15",
+            "link": "https://www.strava.com/activities/2453062151",
+            "value": 1098.0
           }
         ],
         "subgoals": [1170, 1140]
