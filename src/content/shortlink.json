@@ -22,5 +22,9 @@
   {
     "path": "/remote",
     "link": "https://chrome.google.com/webstore/detail/remote-for-google-slides/pojijacppbhikhkmegdoechbfiiibppi"
+  },
+  {
+    "path": "/ap",
+    "link": "https://docs.google.com/presentation/d/1b6HXQxAXyoGjQKOqWzMp90ZPLh-qRYbGK1fQMnX71rs/present"
   }
 ]
