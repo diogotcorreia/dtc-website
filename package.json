@@ -22,7 +22,7 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.2.8",
     "gatsby-source-filesystem": "^2.1.5",
-    "gatsby-transformer-json": "^2.2.2",
+    "gatsby-transformer-json": "^2.2.16",
     "gatsby-transformer-remark": "^2.6.6",
     "gatsby-transformer-sharp": "^2.3.2",
     "prop-types": "^15.7.2",
