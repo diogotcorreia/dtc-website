@@ -28,7 +28,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-particle-animation": "^1.0.1",
     "react-particles-js": "^2.7.0",
