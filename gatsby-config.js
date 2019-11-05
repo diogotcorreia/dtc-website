@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: 'https://diogotc.com',
   },
   plugins: [
+    `gatsby-plugin-top-layout`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,7 +16,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-top-layout`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -78,6 +78,7 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-json',
+    `gatsby-transformer-json`,
+    `gatsby-plugin-netlify`,
   ],
 };
