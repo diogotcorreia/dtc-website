@@ -168,7 +168,7 @@
     "name": "Events to Attend",
     "goals": [
       { "name": "Web Summit", "type": 1 },
-      { "name": "Lisbon Games Week", "type": 2, "edits": [{ "date": "can't remember when" }] }
+      { "name": "Lisbon Games Week", "type": 1, "edits": [{ "date": "2014-11-09" }] }
     ]
   },
   {
