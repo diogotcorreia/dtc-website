@@ -118,8 +118,8 @@
       {
         "name": "Run 200m",
         "type": 0,
-        "edits": [{ "date": "2018-04-19", "value": 29.9 }],
-        "subgoals": [30, 29]
+        "edits": [{ "date": "2018-04-19", "value": 29.9 }, { "date": "2019-11-28", "value": 28.1 }],
+        "subgoals": [30, 29, 28]
       },
       {
         "name": "Run 300m",
