@@ -74,6 +74,11 @@
             "date": "2019-09-22",
             "link": "https://www.strava.com/activities/2730140392",
             "value": 2318.0
+          },
+          {
+            "date": "2020-01-11",
+            "link": "https://www.strava.com/activities/3001812867",
+            "value": 2302.0
           }
         ],
         "subgoals": [2700, 2580, 2400, 2220]
