@@ -74,37 +74,44 @@ class Splash extends Component {
               tooltip='diogotcorreia'
               component={<GitHubIcon className={classes.icon} />}
               href='https://github.com/diogotcorreia'
+              analyticsEvent='github'
             />
             <Icon
               tooltip='@diogotc2002'
               component={<TwitterIcon className={classes.icon} />}
               href='https://twitter.com/diogotc2002'
+              analyticsEvent='twitter'
             />
             <Icon
               tooltip='Rexcantor64#7413'
               component={<DiscordIcon className={classes.icon} />}
               // eslint-disable-next-line
               href='javascript:void(0);'
+              analyticsEvent='discord'
             />
             <Icon
               tooltip='Diogo Correia'
               component={<StravaIcon className={classes.icon} />}
               href='https://www.strava.com/athletes/22762930'
+              analyticsEvent='strava'
             />
             <Icon
               tooltip='rexcantor64'
               component={<SteamIcon className={classes.icon} />}
               href='https://steamcommunity.com/id/rexcantor64'
+              analyticsEvent='steam'
             />
             <Icon
               tooltip='@diogotc2002'
               component={<InstagramIcon className={classes.icon} />}
               href='https://www.instagram.com/diogotc2002/'
+              analyticsEvent='instagram'
             />
             <Icon
               tooltip='me@diogotc.com'
               component={<MailIcon className={classes.icon} />}
               href='mailto:me@diogotc.com'
+              analyticsEvent='mail'
             />
           </div>
         </div>
@@ -113,9 +120,14 @@ class Splash extends Component {
   }
 }
 
-const Icon = ({ component, tooltip, ...props }) => (
+const Icon = ({ component, tooltip, analyticsEvent, ...props }) => (
   <Tooltip title={tooltip} interactive enterTouchDelay={0}>
-    <a target='_blank' rel='noopener' {...props}>
+    <a
+      target='_blank'
+      rel='noopener'
+      classname={`umami--click--${analyticsEvent}-social-hero`}
+      {...props}
+    >
       {component}
     </a>
   </Tooltip>
