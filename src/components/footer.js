@@ -56,7 +56,9 @@ const Footer = ({ homepage }) => {
               <Typography variant='body2' component='li'>
                 Email:{' '}
                 <span className={classes.lightText}>
-                  <a href='mailto:me@diogotc.com'>me@diogotc.com</a>
+                  <a href='mailto:me@diogotc.com' className='umami--click--mail-social-footer'>
+                    me@diogotc.com
+                  </a>
                 </span>
               </Typography>
               <Typography variant='body2' component='li'>
@@ -69,6 +71,7 @@ const Footer = ({ homepage }) => {
                     href='https://twitter.com/diogotc2002'
                     rel='noopener noreferrer'
                     target='_blank'
+                    className='umami--click--twitter-social-footer'
                   >
                     @diogotc2002
                   </a>
