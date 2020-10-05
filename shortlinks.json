@@ -22,5 +22,9 @@
   {
     "fromPath": "/remote",
     "toPath": "https://chrome.google.com/webstore/detail/remote-for-google-slides/pojijacppbhikhkmegdoechbfiiibppi"
+  },
+  {
+    "fromPath": "/ist",
+    "toPath": "https://www.notion.so/diogocorreia/IST-b482a5ca9372416894721d0fa11e78d1"
   }
 ]
