@@ -169,6 +169,11 @@
             "date": "2019-04-28",
             "value": 182.07,
             "link": "https://www.strava.com/activities/2326918389"
+          },
+          {
+            "date": "2020-11-12",
+            "value": 179.3,
+            "link": "https://www.strava.com/activities/4328742407"
           }
         ],
         "subgoals": [200, 180]
