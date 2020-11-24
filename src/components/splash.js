@@ -83,7 +83,7 @@ class Splash extends Component {
               analyticsEvent='twitter'
             />
             <Icon
-              tooltip='Rexcantor64#7413'
+              tooltip='Rexcantor64#0001'
               component={<DiscordIcon className={classes.icon} />}
               analyticsEvent='discord'
             />
