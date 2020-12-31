@@ -62,7 +62,7 @@ const Footer = ({ homepage }) => {
                 </span>
               </Typography>
               <Typography variant='body2' component='li'>
-                Discord: <span className={classes.lightText}>Rexcantor64#0001</span>
+                Discord: <span className={classes.lightText}>DiogoCorreia#7295</span>
               </Typography>
               <Typography variant='body2' component='li'>
                 Twitter:{' '}
