@@ -1,5 +1,30 @@
 [
   {
+    "name": "Technology Goals",
+    "goals": [
+      {
+        "type": 1,
+        "name": "Install Arch Linux",
+        "edits": [{ "date": "2021-01-22" }]
+      },
+      {
+        "type": 1,
+        "name": "Implement CI/CD on a big project",
+        "edits": []
+      },
+      {
+        "type": 1,
+        "name": "Ship an Electron App",
+        "edits": []
+      },
+      {
+        "type": 1,
+        "name": "Code a mobile app with React Native",
+        "edits": []
+      }
+    ]
+  },
+  {
     "name": "Health/Sports Goals",
     "goals": [
       {
