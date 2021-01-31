@@ -31,7 +31,7 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-particles-js": "^2.7.0",
+    "react-tsparticles": "^1.18.11",
     "react-vertical-timeline-component": "^3.0.2",
     "styled-components": "^5.1.1",
     "styled-media-query": "^2.1.2"
