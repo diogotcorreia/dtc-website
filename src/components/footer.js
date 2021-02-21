@@ -32,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.primary.dark,
     padding: `${theme.spacing(1)}px 0`,
   },
+  footerBottom: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
   creditsText: {
     fontWeight: 300,
     fontSize: '0.80rem',
@@ -110,9 +114,19 @@ const Footer = ({ homepage }) => {
         </Grid>
       </Container>
       <div className={classes.credits}>
-        <Container>
+        <Container className={classes.footerBottom}>
           <Typography variant='body2' className={classes.creditsText}>
             © 2017-{new Date().getFullYear()} Diogo Torres Correia
+          </Typography>
+          <Typography variant='body2'>
+            <a
+              href='https://github.com/diogotcorreia/dtc-website'
+              rel='noopener noreferrer'
+              target='_blank'
+              className='umami--click--source-code-footer'
+            >
+              Website Source Code
+            </a>
           </Typography>
         </Container>
       </div>
