@@ -2,8 +2,8 @@
 name: Portugal Ultra Triathlon
 icon: ./put.png
 order: 2
-link: https://portugalultratriathlon.com
-calltoaction: Visit Website
+link: https://web.archive.org/web/20191113224253/https://www.portugalultratriathlon.com/
+calltoaction: Visit Archived Website
 background: '#1b4d7b'
 color: '#fff'
 ---

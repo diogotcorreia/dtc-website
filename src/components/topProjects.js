@@ -52,9 +52,6 @@ const useStylesProject = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
   },
-  calltoaction: (props) => ({
-    color: props.color,
-  }),
 }));
 
 const Project = ({ name, content, icon, link, calltoaction, background, color }) => {
@@ -68,12 +65,13 @@ const Project = ({ name, content, icon, link, calltoaction, background, color })
       </CardContent>
       <CardActions>
         <Button
-          className={classes.calltoaction}
           size='small'
           component='a'
           href={link}
           target='_blank'
           rel='noopener'
+          disabled={!link}
+          color='inherit'
         >
           {calltoaction}
         </Button>
