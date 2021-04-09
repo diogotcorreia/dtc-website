@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
 import SectionTitle from '../components/sectionTitle';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Splash from '../components/splash';
 import Timeline from '../components/timeline';
 import TopProjects from '../components/topProjects';
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
   const classes = useStyles();
   return (
     <Layout homepage>
-      <SEO title='Home' />
+      <Seo title='Home' />
       <Splash />
       <Box className={classes.section} id='aboutme'>
         <Container>
@@ -83,9 +83,7 @@ export const query = graphql`
           color
           icon {
             childImageSharp {
-              fixed(width: 80, height: 80) {
-                ...GatsbyImageSharpFixed_withWebp
-              }
+              gatsbyImageData(layout: FIXED, placeholder: BLURRED, width: 80, height: 80)
             }
           }
         }

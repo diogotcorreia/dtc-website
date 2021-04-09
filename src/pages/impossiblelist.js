@@ -5,7 +5,7 @@ import React from 'react';
 import Category from '../components/impossiblelist/category';
 import Splash from '../components/impossiblelist/splash';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -20,7 +20,7 @@ const SecondPage = ({ data }) => {
   const classes = useStyles();
   return (
     <Layout>
-      <SEO title='Impossible List' />
+      <Seo title='Impossible List' />
       <Splash />
       <Box className={classes.section}>
         <Container>

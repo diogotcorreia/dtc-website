@@ -1,7 +1,7 @@
-import React from 'react';
-import { Typography, Card, CardContent, CardActions, Button } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +21,7 @@ const TopProjects = ({ topProjects }) => {
           key={project.frontmatter.name}
           name={project.frontmatter.name}
           content={project.html}
-          icon={project.frontmatter.icon.childImageSharp.fixed}
+          icon={project.frontmatter.icon.childImageSharp.gatsbyImageData}
           link={project.frontmatter.link}
           calltoaction={project.frontmatter.calltoaction}
           background={project.frontmatter.background}
@@ -59,7 +59,7 @@ const Project = ({ name, content, icon, link, calltoaction, background, color })
   return (
     <Card className={classes.root}>
       <CardContent className={classes.content}>
-        <Img className={classes.image} fixed={icon} />
+        <GatsbyImage className={classes.image} image={icon} alt={name} />
         <Typography variant='h6'>{name}</Typography>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </CardContent>
