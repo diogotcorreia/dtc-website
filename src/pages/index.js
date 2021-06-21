@@ -94,7 +94,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/timeline/" }
         internal: { type: { eq: "MarkdownRemark" } }
       }
-      sort: { fields: frontmatter___order, order: ASC }
+      sort: { fields: frontmatter___order, order: DESC }
     ) {
       nodes {
         html
