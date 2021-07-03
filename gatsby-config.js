@@ -72,13 +72,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          '/.well-known/*': ['Access-Control-Allow-Origin: *'],
-        },
-      },
-    },
+    `gatsby-plugin-netlify`,
   ],
 };

@@ -26,5 +26,9 @@
   {
     "fromPath": "/ist",
     "toPath": "https://www.notion.so/diogocorreia/IST-b482a5ca9372416894721d0fa11e78d1"
+  },
+  {
+    "fromPath": "/.well-known/matrix/*",
+    "toPath": "https://m.diogotc.com/.well-known/matrix/:splat"
   }
 ]

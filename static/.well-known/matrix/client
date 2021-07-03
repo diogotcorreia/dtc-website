@@ -1,9 +1,0 @@
-{
-	"m.homeserver": {
-		"base_url": "https://m.diogotc.com"
-	}
-,
-	"m.identity_server": {
-		"base_url": "https://m.diogotc.com"
-	}
-}
