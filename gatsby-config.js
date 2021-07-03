@@ -76,7 +76,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
-          '/.well-known': ['Access-Control-Allow-Origin: *'],
+          '/.well-known/*': ['Access-Control-Allow-Origin: *'],
         },
       },
     },
