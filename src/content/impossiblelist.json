@@ -166,8 +166,15 @@
       {
         "name": "Run 400m",
         "type": 0,
-        "edits": [{ "date": "2018-04-17", "value": 66.7 }],
-        "subgoals": [70, 65]
+        "edits": [
+          { "date": "2018-04-17", "value": 66.7 },
+          {
+            "date": "2023-04-07",
+            "value": 63.8,
+            "link": "https://www.strava.com/activities/8844006830"
+          }
+        ],
+        "subgoals": [70, 65, 60]
       },
       {
         "name": "Run 500m",
