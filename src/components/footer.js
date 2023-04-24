@@ -60,7 +60,7 @@ const Footer = ({ homepage }) => {
               <Typography variant='body2' component='li'>
                 Email:{' '}
                 <span className={classes.lightText}>
-                  <a href='mailto:me@diogotc.com' className='umami--click--mail-social-footer'>
+                  <a href='mailto:me@diogotc.com' data-umami-event='mail-social-footer'>
                     me@diogotc.com
                   </a>
                 </span>
@@ -75,7 +75,7 @@ const Footer = ({ homepage }) => {
                     href='https://twitter.com/diogotc2002'
                     rel='noopener noreferrer'
                     target='_blank'
-                    className='umami--click--twitter-social-footer'
+                    data-umami-event='twitter-social-footer'
                   >
                     @diogotc2002
                   </a>
@@ -123,7 +123,7 @@ const Footer = ({ homepage }) => {
               href='https://github.com/diogotcorreia/dtc-website'
               rel='noopener noreferrer'
               target='_blank'
-              className='umami--click--source-code-footer'
+              data-umami-event='source-code-footer'
             >
               Website Source Code
             </a>
