@@ -1,5 +1,5 @@
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/styles';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
 import classnames from 'classnames';
 import React from 'react';
 import ProfileImage from '../profileImage';
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 50,
     width: '90%',
     maxWidth: 1280,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '85%',
     },
     textAlign: 'center',

@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: 'https://diogotc.com',
   },
   plugins: [
-    `gatsby-plugin-top-layout`,
+    `gatsby-theme-material-ui`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,14 +48,6 @@ module.exports = {
     },
     // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
     `gatsby-plugin-offline`,
-    {
-      resolve: 'gatsby-plugin-material-ui',
-      options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
-      },
-    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

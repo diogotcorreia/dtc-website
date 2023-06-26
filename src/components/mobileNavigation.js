@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/styles';
-import MenuIcon from '@material-ui/icons/Menu';
+import { withStyles } from '@mui/styles';
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   Hidden,
   IconButton,
@@ -9,12 +9,14 @@ import {
   ListItemText,
   List,
   ListItem,
-} from '@material-ui/core';
+} from '@mui/material';
 import { Link } from 'gatsby';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import AboutMeIcon from '@material-ui/icons/PersonRounded';
-import PortfolioIcon from '@material-ui/icons/BookRounded';
-import ImpossibleListIcon from '@material-ui/icons/StarRounded';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
+import AboutMeIcon from '@mui/icons-material/PersonRounded';
+import PortfolioIcon from '@mui/icons-material/BookRounded';
+import ImpossibleListIcon from '@mui/icons-material/StarRounded';
+
+const AnchorLink = Link;
 
 const styles = (theme) => ({
   menuButton: {
@@ -46,7 +48,7 @@ class MobileNavigation extends Component {
             color='inherit'
             aria-label='Menu'
             onClick={this.toggleDrawer(true)}
-          >
+            size="large">
             <MenuIcon />
           </IconButton>
         </Hidden>

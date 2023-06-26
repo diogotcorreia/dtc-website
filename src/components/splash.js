@@ -1,6 +1,6 @@
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/styles';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import { withStyles } from '@mui/styles';
 import classnames from 'classnames';
 import React, { Component } from 'react';
 import DiscordIcon from '../assets/discord.svg';
@@ -24,7 +24,7 @@ const styles = (theme) => ({
     marginTop: 50,
     width: '90%',
     maxWidth: 1280,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '85%',
     },
     textAlign: 'center',

@@ -1,8 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { Container, Grid, Typography } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { Container, Grid, Typography } from '@mui/material';
 import { Link } from 'gatsby';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
+const AnchorLink = Link;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   credits: {
     background: theme.palette.primary.dark,
-    padding: `${theme.spacing(1)}px 0`,
+    padding: `${theme.spacing(1)} 0`,
   },
   footerBottom: {
     display: 'flex',

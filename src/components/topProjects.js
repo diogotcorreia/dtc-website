@@ -1,5 +1,5 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 
@@ -35,7 +35,7 @@ const TopProjects = ({ topProjects }) => {
 const useStylesProject = makeStyles((theme) => ({
   root: (props) => ({
     flex: '1 1 auto',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       maxWidth: 'initial',
     },
     maxWidth: 350,

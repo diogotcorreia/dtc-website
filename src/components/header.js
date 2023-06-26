@@ -1,11 +1,13 @@
-import { AppBar, Button, Hidden, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { AppBar, Button, Hidden, Toolbar, Typography, useScrollTrigger } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
 import MobileNavigation from './mobileNavigation';
+
+const AnchorLink = Link;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,7 +41,7 @@ const Header = ({ siteTitle, homepage }) => {
         >
           {siteTitle}
         </Typography>
-        <Hidden xsDown>
+        <Hidden smDown>
           <Button
             component={homepage ? AnchorLink : Link}
             offset='64'

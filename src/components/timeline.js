@@ -1,7 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import './timeline.css';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 const Timeline = ({ data }) => {
   return (

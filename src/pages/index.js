@@ -1,10 +1,10 @@
-import { Box, Container, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { Box, Container, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
 import SectionTitle from '../components/sectionTitle';
-import Seo from '../components/seo';
+// import Seo from '../components/seo';
 import Splash from '../components/splash';
 import Timeline from '../components/timeline';
 import TopProjects from '../components/topProjects';
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
   const classes = useStyles();
   return (
     <Layout homepage>
-      <Seo title='Home' />
+    {/* <Seo title='Home' />*/}
       <Splash />
       <Box className={classes.section} id='aboutme'>
         <Container>
