@@ -1,21 +1,18 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    justifyContent: 'center',
-    alignContent: 'center',
-  },
-}));
-
 const TopProjects = ({ topProjects }) => {
-  const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexFlow: 'row wrap',
+        justifyContent: 'center',
+        alignContent: 'center',
+      }}
+    >
       {topProjects.map((project) => (
         <Project
           key={project.frontmatter.name}
@@ -28,38 +25,35 @@ const TopProjects = ({ topProjects }) => {
           color={project.frontmatter.color}
         />
       ))}
-    </div>
+    </Box>
   );
 };
 
-const useStylesProject = makeStyles((theme) => ({
-  root: (props) => ({
-    flex: '1 1 auto',
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: 'initial',
-    },
-    maxWidth: 350,
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 10,
-    backgroundColor: props.background,
-    color: theme.palette.getContrastText(props.background),
-  }),
-  image: {
-    margin: '0 auto 10px auto',
-    display: 'block !important',
+const ProjectCard = styled(Card, {
+  shouldForwardProp: (prop) => prop !== 'background',
+})(({ background, theme }) => ({
+  flex: '1 1 auto',
+  [theme.breakpoints.down('sm')]: {
+    maxWidth: 'initial',
   },
-  content: {
-    flexGrow: 1,
-  },
+  maxWidth: 350,
+  display: 'flex',
+  flexDirection: 'column',
+  margin: 10,
+  backgroundColor: background,
+  color: theme.palette.getContrastText(background),
+}));
+
+const ProjectImage = styled(GatsbyImage)(() => ({
+  margin: '0 auto 10px auto',
+  display: 'block !important',
 }));
 
 const Project = ({ name, content, icon, link, calltoaction, background, color }) => {
-  const classes = useStylesProject({ background, color });
   return (
-    <Card className={classes.root}>
-      <CardContent className={classes.content}>
-        <GatsbyImage className={classes.image} image={icon} alt={name} />
+    <ProjectCard background={background}>
+      <CardContent sx={{ flexGrow: 1 }}>
+        <ProjectImage image={icon} alt={name} />
         <Typography variant='h6'>{name}</Typography>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </CardContent>
@@ -76,7 +70,7 @@ const Project = ({ name, content, icon, link, calltoaction, background, color })
           {calltoaction}
         </Button>
       </CardActions>
-    </Card>
+    </ProjectCard>
   );
 };
 

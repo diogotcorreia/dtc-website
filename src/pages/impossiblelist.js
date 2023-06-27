@@ -20,7 +20,7 @@ const SecondPage = ({ data }) => {
   const classes = useStyles();
   return (
     <Layout>
-    {/* <Seo title='Impossible List' />*/}
+      {/* <Seo title='Impossible List' />*/}
       <Splash />
       <Box className={classes.section}>
         <Container>

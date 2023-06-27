@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
   const classes = useStyles();
   return (
     <Layout homepage>
-    {/* <Seo title='Home' />*/}
+      {/* <Seo title='Home' />*/}
       <Splash />
       <Box className={classes.section} id='aboutme'>
         <Container>

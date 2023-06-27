@@ -119,7 +119,7 @@ class Splash extends Component {
 }
 
 const Icon = ({ component, tooltip, analyticsEvent, ...props }) => (
-  <Tooltip title={tooltip} interactive enterTouchDelay={0}>
+  <Tooltip title={tooltip} enterTouchDelay={0}>
     <a target='_blank' rel='noopener' data-umami-event={`${analyticsEvent}-social-hero`} {...props}>
       {component}
     </a>

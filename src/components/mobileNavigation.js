@@ -48,7 +48,8 @@ class MobileNavigation extends Component {
             color='inherit'
             aria-label='Menu'
             onClick={this.toggleDrawer(true)}
-            size="large">
+            size='large'
+          >
             <MenuIcon />
           </IconButton>
         </Hidden>
