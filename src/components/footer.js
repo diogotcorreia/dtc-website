@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 import { Container, Grid, Typography } from '@mui/material';
 import { Link } from 'gatsby';
 // import AnchorLink from 'react-anchor-link-smooth-scroll';
-const AnchorLink = Link;
+const AnchorLink = 'a';
 
 const useStyles = makeStyles((theme) => ({
   root: {

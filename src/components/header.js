@@ -1,13 +1,12 @@
 import { AppBar, Button, Hidden, Toolbar, Typography, useScrollTrigger } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
-import classnames from 'classnames';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 // import AnchorLink from 'react-anchor-link-smooth-scroll';
 import MobileNavigation from './mobileNavigation';
 
-const AnchorLink = Link;
+const AnchorLink = 'a';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +28,13 @@ const Header = ({ siteTitle, homepage }) => {
   const classes = useStyles();
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 100 });
   return (
-    <AppBar className={classnames({ [classes.root]: true, [classes.rootSplash]: !trigger })}>
+    <AppBar
+      sx={{
+        flexGrow: 1,
+        transition: 'all 250ms',
+        ...(trigger ? {} : { backgroundColor: 'transparent', boxShadow: 'none' }),
+      }}
+    >
       <Toolbar>
         <MobileNavigation homepage={homepage} />
         <Typography

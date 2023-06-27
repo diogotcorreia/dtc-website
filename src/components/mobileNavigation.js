@@ -16,7 +16,7 @@ import AboutMeIcon from '@mui/icons-material/PersonRounded';
 import PortfolioIcon from '@mui/icons-material/BookRounded';
 import ImpossibleListIcon from '@mui/icons-material/StarRounded';
 
-const AnchorLink = Link;
+const AnchorLink = 'a';
 
 const styles = (theme) => ({
   menuButton: {

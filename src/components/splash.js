@@ -1,8 +1,7 @@
-import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
-import { withStyles } from '@mui/styles';
-import classnames from 'classnames';
-import React, { Component } from 'react';
+import { css } from '@emotion/react';
+import { Box, Tooltip, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import React from 'react';
 import DiscordIcon from '../assets/discord.svg';
 import GitHubIcon from '../assets/github.svg';
 import MailIcon from '../assets/gmail.svg';
@@ -12,118 +11,117 @@ import StravaIcon from '../assets/strava.svg';
 import TwitterIcon from '../assets/twitter.svg';
 import ProfileImage from './profileImage';
 
-const styles = (theme) => ({
-  root: {
-    minHeight: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+const Container = styled('div')(({ theme }) => ({
+  marginBottom: 50,
+  marginTop: 50,
+  width: '90%',
+  maxWidth: 1280,
+  [theme.breakpoints.down('md')]: {
+    width: '85%',
   },
-  container: {
-    marginBottom: 50,
-    marginTop: 50,
-    width: '90%',
-    maxWidth: 1280,
-    [theme.breakpoints.down('md')]: {
-      width: '85%',
-    },
-    textAlign: 'center',
-  },
-  picture: {
-    margin: 'auto',
-    width: 100,
-    borderRadius: 100,
-  },
-  text: {
-    color: 'white',
-  },
-  title: {
-    fontFamily: '"Nunito", "Roboto", "Helvetica", "Arial", sans-serif',
-    fontSize: '4rem',
-    marginTop: 30,
-    marginBottom: 10,
-  },
-  subtitle: {
-    fontSize: '1.5rem',
-  },
-  icons: {
-    marginTop: 32,
-  },
-  icon: {
-    width: 40,
-    fill: '#fff',
-    padding: '0 8px',
-  },
+  textAlign: 'center',
+}));
+
+const Title = styled(Typography)({
+  color: 'white',
+  fontFamily: '"Nunito", "Roboto", "Helvetica", "Arial", sans-serif',
+  fontSize: '4rem',
+  marginTop: 30,
+  marginBottom: 10,
 });
 
-class Splash extends Component {
-  render() {
-    const { classes } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.container}>
-          <ProfileImage className={classes.picture} />
-          <Typography variant='h1' className={classnames(classes.text, classes.title)}>
-            Diogo Correia
-          </Typography>
-          <Typography variant='h4' className={classnames(classes.text, classes.subtitle)}>
-            Student, Developer &amp; Runner
-          </Typography>
-          <div className={classes.icons}>
-            <Icon
-              tooltip='diogotcorreia'
-              component={<GitHubIcon className={classes.icon} />}
-              href='https://github.com/diogotcorreia'
-              analyticsEvent='github'
-            />
-            <Icon
-              tooltip='@diogotc2002'
-              component={<TwitterIcon className={classes.icon} />}
-              href='https://twitter.com/diogotc2002'
-              analyticsEvent='twitter'
-            />
-            <Icon
-              tooltip='DiogoCorreia#7295'
-              component={<DiscordIcon className={classes.icon} />}
-              analyticsEvent='discord'
-            />
-            <Icon
-              tooltip='Diogo Correia'
-              component={<StravaIcon className={classes.icon} />}
-              href='https://www.strava.com/athletes/22762930'
-              analyticsEvent='strava'
-            />
-            <Icon
-              tooltip='rexcantor64'
-              component={<SteamIcon className={classes.icon} />}
-              href='https://steamcommunity.com/id/rexcantor64'
-              analyticsEvent='steam'
-            />
-            <Icon
-              tooltip='@diogotc2002'
-              component={<InstagramIcon className={classes.icon} />}
-              href='https://www.instagram.com/diogotc2002/'
-              analyticsEvent='instagram'
-            />
-            <Icon
-              tooltip='me@diogotc.com'
-              component={<MailIcon className={classes.icon} />}
-              href='mailto:me@diogotc.com'
-              analyticsEvent='mail'
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+const Subtitle = styled(Typography)({
+  color: 'white',
+  fontSize: '1.5rem',
+});
 
-const Icon = ({ component, tooltip, analyticsEvent, ...props }) => (
+const RoundProfileImage = styled(ProfileImage)({
+  margin: 'auto',
+  width: 100,
+  borderRadius: 100,
+});
+
+const iconStyle = css({
+  width: 40,
+  fill: '#fff',
+  padding: '0 8px',
+});
+
+const Splash = () => {
+  return (
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Container>
+        <RoundProfileImage />
+        <Title variant='h1'>Diogo Correia</Title>
+        <Subtitle variant='h4'>Student, Developer &amp; Runner</Subtitle>
+        <Box sx={{ marginTop: 4 }}>
+          <Icon
+            tooltip='diogotcorreia'
+            component={GitHubIcon}
+            href='https://github.com/diogotcorreia'
+            analyticsEvent='github'
+          />
+          <Icon
+            tooltip='@diogotc2002'
+            component={TwitterIcon}
+            href='https://twitter.com/diogotc2002'
+            analyticsEvent='twitter'
+          />
+          <Icon tooltip='DiogoCorreia#7295' component={DiscordIcon} analyticsEvent='discord' />
+          <Icon
+            tooltip='Diogo Correia'
+            component={StravaIcon}
+            href='https://www.strava.com/athletes/22762930'
+            analyticsEvent='strava'
+          />
+          <Icon
+            tooltip='rexcantor64'
+            component={SteamIcon}
+            href='https://steamcommunity.com/id/rexcantor64'
+            analyticsEvent='steam'
+          />
+          <Icon
+            tooltip='@diogotc2002'
+            component={InstagramIcon}
+            href='https://www.instagram.com/diogotc2002/'
+            analyticsEvent='instagram'
+          />
+          <Icon
+            tooltip='me@diogotc.com'
+            component={MailIcon}
+            href='mailto:me@diogotc.com'
+            analyticsEvent='mail'
+          />
+        </Box>
+      </Container>
+    </Box>
+  );
+};
+
+const Icon = ({ component: IconComponent, tooltip, analyticsEvent, ...props }) => (
   <Tooltip title={tooltip} enterTouchDelay={0}>
     <a target='_blank' rel='noopener' data-umami-event={`${analyticsEvent}-social-hero`} {...props}>
-      {component}
+      <Box
+        sx={{
+          display: 'inline',
+          '& svg': {
+            width: 40,
+            fill: '#fff',
+            padding: '0 8px',
+          },
+        }}
+      >
+        <IconComponent css={iconStyle} />
+      </Box>
     </a>
   </Tooltip>
 );
 
-export default withStyles(styles)(Splash);
+export default Splash;
