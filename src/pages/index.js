@@ -71,7 +71,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/topprojects/" }
         internal: { type: { eq: "MarkdownRemark" } }
       }
-      sort: { fields: frontmatter___order, order: ASC }
+      sort: { frontmatter: { order: ASC } }
     ) {
       nodes {
         html
@@ -94,7 +94,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/timeline/" }
         internal: { type: { eq: "MarkdownRemark" } }
       }
-      sort: { fields: frontmatter___order, order: DESC }
+      sort: { frontmatter: { order: DESC } }
     ) {
       nodes {
         html
