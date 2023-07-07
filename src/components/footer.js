@@ -1,77 +1,28 @@
 import React from 'react';
-import { makeStyles } from '@mui/styles';
-import { Container, Grid, Typography } from '@mui/material';
 import { Link } from 'gatsby';
-// import AnchorLink from 'react-anchor-link-smooth-scroll';
-const AnchorLink = 'a';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    background: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
-    paddingTop: theme.spacing(2),
-    boxShadow: theme.shadows[2],
-    '& a': {
-      color: '#00acff',
-      textDecoration: 'none',
-    },
-  },
-  header: {
-    fontSize: '1.45rem',
-    lineHeight: '110%',
-    margin: '.82rem 0 .656rem 0',
-    fontWeight: 400,
-  },
-  lightText: {
-    fontWeight: 300,
-  },
-  list: {
-    listStyleType: 'none',
-    marginLeft: 0,
-  },
-  credits: {
-    background: theme.palette.primary.dark,
-    padding: `${theme.spacing(1)} 0`,
-  },
-  footerBottom: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  creditsText: {
-    fontWeight: 300,
-    fontSize: '0.80rem',
-  },
-  sitemapLink: {
-    padding: '4px 0',
-    color: 'red',
-  },
-}));
+import * as styles from './footer.module.css';
 
 const Footer = ({ homepage }) => {
-  var classes = useStyles();
   return (
-    <footer className={classes.root}>
-      <Container>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <Typography variant='h5' className={classes.header}>
-              Contact me
-            </Typography>
-            <ul className={classes.list}>
-              <Typography variant='body2' component='li'>
+    <footer className={styles.root}>
+      <div className={`container ${styles.flex}`}>
+          <div className=''>
+            <h5 className={styles.sectionHeader}>Contact me</h5>
+            <ul className={styles.list}>
+              <li>
                 Email:{' '}
-                <span className={classes.lightText}>
+                <span className={styles.lightText}>
                   <a href='mailto:me@diogotc.com' data-umami-event='mail-social-footer'>
                     me@diogotc.com
                   </a>
                 </span>
-              </Typography>
-              <Typography variant='body2' component='li'>
-                Discord: <span className={classes.lightText}>DiogoCorreia#7295</span>
-              </Typography>
-              <Typography variant='body2' component='li'>
+              </li>
+              <li>
+                Discord: <span className={styles.lightText}>DiogoCorreia#7295</span>
+              </li>
+              <li>
                 Twitter:{' '}
-                <span className={classes.lightText}>
+                <span className={styles.lightText}>
                   <a
                     href='https://twitter.com/diogotc2002'
                     rel='noopener noreferrer'
@@ -81,45 +32,40 @@ const Footer = ({ homepage }) => {
                     @diogotc2002
                   </a>
                 </span>
-              </Typography>
+              </li>
             </ul>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Typography variant='h5' className={classes.header}>
-              Site map
-            </Typography>
-            <ul className={classes.list}>
-              <Typography variant='body2' component='li' className={classes.sitemapLink}>
+          </div>
+          <div>
+            <h5 className={styles.sectionHeader}>Site map</h5>
+            <ul className={styles.list}>
+              <li className={styles.sitemapLink}>
                 {homepage ? (
-                  <AnchorLink offset='64' href='#aboutme'>
+                  <a offset='64' href='#aboutme'>
                     About me
-                  </AnchorLink>
+                  </a>
                 ) : (
                   <Link to='/#aboutme'>About me</Link>
                 )}
-              </Typography>
-              <Typography variant='body2' component='li' className={classes.sitemapLink}>
+              </li>
+              <li className={styles.sitemapLink}>
                 {homepage ? (
-                  <AnchorLink offset='64' href='#portfolio'>
+                  <a offset='64' href='#portfolio'>
                     Portfolio
-                  </AnchorLink>
+                  </a>
                 ) : (
                   <Link to='/#portfolio'>Portfolio</Link>
                 )}
-              </Typography>
-              <Typography variant='body2' component='li' className={classes.sitemapLink}>
+              </li>
+              <li className={styles.sitemapLink}>
                 <Link to='/impossiblelist'>Impossible List</Link>
-              </Typography>
+              </li>
             </ul>
-          </Grid>
-        </Grid>
-      </Container>
-      <div className={classes.credits}>
-        <Container className={classes.footerBottom}>
-          <Typography variant='body2' className={classes.creditsText}>
-            © 2017-{new Date().getFullYear()} Diogo Torres Correia
-          </Typography>
-          <Typography variant='body2'>
+          </div>
+      </div>
+      <div className={styles.credits}>
+        <div className='container'>
+          <span>© 2017-{new Date().getFullYear()} Diogo Torres Correia</span>
+          <span>
             <a
               href='https://github.com/diogotcorreia/dtc-website'
               rel='noopener noreferrer'
@@ -128,8 +74,8 @@ const Footer = ({ homepage }) => {
             >
               Website Source Code
             </a>
-          </Typography>
-        </Container>
+          </span>
+        </div>
       </div>
     </footer>
   );

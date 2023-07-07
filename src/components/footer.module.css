@@ -1,0 +1,55 @@
+.root {
+  background: var(--background-color);
+  color: var(--text-color);
+
+  padding-top: 1em;
+}
+
+.sectionHeader {
+  font-size: 1.45rem;
+  line-height: 100%;
+  font-weight: 400;
+
+  margin: 0.82rem 0 .656rem 0;
+}
+
+.lightText {
+  font-weight: 300;
+}
+
+.list {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.credits {
+  background: var(--background-color-darker);
+  padding: 0.5em 0;
+}
+
+.credits div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credits span {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.sitemapLink {
+  padding: 1em 0;
+}
+
+.flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .flex {
+    grid-template-columns: 1fr 1fr;
+  }
+}
