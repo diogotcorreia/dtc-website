@@ -1,27 +1,12 @@
-import { makeStyles } from '@mui/styles';
 import React from 'react';
-import Typography from '@mui/material/Typography';
-
-const useStyles = makeStyles({
-  root: {
-    padding: '75px 0',
-    color: '#fff',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
-  title: {
-    marginBottom: 0,
-  },
-});
+import * as styles from './sectionTitle.module.css';
 
 const SectionTitle = ({ title, ...props }) => {
-  const classes = useStyles();
   return (
-    <div className={classes.root} {...props}>
-      <Typography variant='h4' className={classes.title}>
+    <div className={styles.section} {...props}>
+      <h4 className={styles.title}>
         {title}
-      </Typography>
+      </h4>
     </div>
   );
 };

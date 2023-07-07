@@ -1,0 +1,14 @@
+.section {
+  padding: 4em;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 2.125rem;
+  font-weight: 400;
+}
