@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { styled } from '@mui/material/styles';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
+import * as styles from './background.module.css';
 
-const ParticlesBackground = ({ className }) => {
+const ParticlesBackground = () => {
   const [mobile, setMobile] = useState(false);
 
   const updateMobileStatus = useCallback(() => {
@@ -23,7 +23,7 @@ const ParticlesBackground = ({ className }) => {
 
   return (
     <Particles
-      className={className}
+      className={styles.particles}
       init={particlesInit}
       options={{
         particles: {
@@ -82,14 +82,4 @@ const ParticlesBackground = ({ className }) => {
   );
 };
 
-const StyledParticlesBackground = styled(ParticlesBackground)({
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100vw',
-  height: '100vh',
-  background: '#1b1b1b',
-  zIndex: -10,
-});
-
-export default StyledParticlesBackground;
+export default ParticlesBackground;
