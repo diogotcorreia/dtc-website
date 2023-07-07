@@ -1,6 +1,3 @@
-import { css } from '@emotion/react';
-import { Box, Tooltip, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import React from 'react';
 import DiscordIcon from '../assets/discord.svg';
 import GitHubIcon from '../assets/github.svg';
@@ -10,58 +7,16 @@ import SteamIcon from '../assets/steam.svg';
 import StravaIcon from '../assets/strava.svg';
 import TwitterIcon from '../assets/twitter.svg';
 import ProfileImage from './profileImage';
-
-const Container = styled('div')(({ theme }) => ({
-  marginBottom: 50,
-  marginTop: 50,
-  width: '90%',
-  maxWidth: 1280,
-  [theme.breakpoints.down('md')]: {
-    width: '85%',
-  },
-  textAlign: 'center',
-}));
-
-const Title = styled(Typography)({
-  color: 'white',
-  fontFamily: '"Nunito", "Roboto", "Helvetica", "Arial", sans-serif',
-  fontSize: '4rem',
-  marginTop: 30,
-  marginBottom: 10,
-});
-
-const Subtitle = styled(Typography)({
-  color: 'white',
-  fontSize: '1.5rem',
-});
-
-const RoundProfileImage = styled(ProfileImage)({
-  margin: 'auto',
-  width: 100,
-  borderRadius: 100,
-});
-
-const iconStyle = css({
-  width: 40,
-  fill: '#fff',
-  padding: '0 8px',
-});
+import * as styles from './splash.module.css';
 
 const Splash = () => {
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Container>
-        <RoundProfileImage />
-        <Title variant='h1'>Diogo Correia</Title>
-        <Subtitle variant='h4'>Student, Developer &amp; Runner</Subtitle>
-        <Box sx={{ marginTop: 4 }}>
+    <div className={styles.splash}>
+      <div className={`container ${styles.container}`}>
+        <ProfileImage className={styles.profileImage} />
+        <h1 className={styles.title}>Diogo Correia</h1>
+        <h2 className={styles.subtitle}>Student, Developer &amp; Runner</h2>
+        <div className={styles.icons}>
           <Icon
             tooltip='diogotcorreia'
             component={GitHubIcon}
@@ -99,29 +54,18 @@ const Splash = () => {
             href='mailto:me@diogotc.com'
             analyticsEvent='mail'
           />
-        </Box>
-      </Container>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 
 const Icon = ({ component: IconComponent, tooltip, analyticsEvent, ...props }) => (
-  <Tooltip title={tooltip} enterTouchDelay={0}>
+  <div data-tooltip={tooltip} className={styles.tooltip}>
     <a target='_blank' rel='noopener' data-umami-event={`${analyticsEvent}-social-hero`} {...props}>
-      <Box
-        sx={{
-          display: 'inline',
-          '& svg': {
-            width: 40,
-            fill: '#fff',
-            padding: '0 8px',
-          },
-        }}
-      >
-        <IconComponent css={iconStyle} />
-      </Box>
+      <IconComponent className={styles.icon} />
     </a>
-  </Tooltip>
+  </div>
 );
 
 export default Splash;

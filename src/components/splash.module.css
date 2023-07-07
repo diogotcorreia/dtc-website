@@ -1,0 +1,85 @@
+.splash {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.profileImage {
+  margin: auto;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.title {
+  color: var(--text-color);
+  font-family: "Nunito", "Roboto", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.167;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  margin: 0;
+}
+
+.icons {
+  margin-top: 32px;
+}
+
+/* Icon styles */
+
+/* Inspired by https://blog.logrocket.com/creating-beautiful-tooltips-with-only-css/ */
+.tooltip {
+  position: relative;
+
+  display: inline-block;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: 100%;
+  margin-top: 15px;
+
+  font-size: 0.8em;
+
+  word-break: keep-all;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  background: var(--chip-background-color);
+  color: var(--chip-text-color);
+  text-align: center;
+
+  opacity: 0;
+
+  transition: 0.3s opacity;
+}
+
+.tooltip:hover::before, .tooltip:focus::before {
+  opacity: 1;
+  z-index: 10;
+}
+
+.icon {
+  width: 40px;
+  fill: var(--text-color);
+  padding: 0 8px;
+}
+
