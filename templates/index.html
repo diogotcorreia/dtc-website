@@ -1,3 +1,7 @@
-{%- import 'macros/seo.html' as macros_seo %}
+{%- extends "base.html" %}
+
+{%- block content %}
 {{- macros_seo::seo(config=config) }}
 <p>Hello world!</p>
+
+{% endblock content %}
