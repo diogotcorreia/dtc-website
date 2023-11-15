@@ -1,7 +1,33 @@
 {%- extends "base.html" %}
 
 {%- block content %}
+{%- set page_data = section.extra %}
 {{- macros_seo::seo(config=config) }}
-<p>Hello world!</p>
+
+<!-- header -->
+
+<!-- splash -->
+
+<div class="splash">
+  {% set profile_picture = resize_image(path=page_data.profile_picture, width=100, height=100, op="fill") %}
+  <img class="profile-picture" src="{{ profile_picture.url }}" alt="Profile image of {{ page_data.name }}" />
+  <h1>{{ page_data.name }}</h1>
+  <h2>{{ page_data.subtitle }}</h2>
+  <div class="socials">
+    {% for social in page_data.socials %}
+    <a href="{{ social.link | default(value='') }}" target="_blank" rel="noopener" data-umami-event="{{ social.name }}-social-hero">
+      {{ load_data(path=social.icon) | safe }}
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- about me -->
+
+{{ page_data.about_me | striptags | markdown(inline=false) | safe }}
+
+<!-- portfolio -->
+
+<!-- footer -->
 
 {% endblock content %}

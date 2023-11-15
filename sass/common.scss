@@ -1,3 +1,13 @@
 body {
   margin: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+  background: #1b1b1b;
+  color: #fff;
 }
+
+a {
+  text-decoration: none;
+}
+
+@import "./homepage.scss";

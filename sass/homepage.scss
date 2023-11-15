@@ -1,0 +1,35 @@
+.splash {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* TODO container styles */
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
+
+  h1 {
+    font-family: "Nunito", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .socials {
+    margin-top: 32px;
+
+    svg {
+      width: 24px;
+      fill: #fff;
+      margin: 0 8px;
+    }
+  }
+}
