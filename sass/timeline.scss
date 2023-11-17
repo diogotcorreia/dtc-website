@@ -1,0 +1,154 @@
+@use "mixins";
+
+$two-columns-breakpoint: 1170px;
+
+.timeline {
+  margin: 2em auto;
+  max-width: $two-columns-breakpoint;
+  padding: 2em 0;
+  position: relative;
+  width: 95%;
+
+  @media only screen and (min-width: $two-columns-breakpoint) {
+    margin: 3em auto;
+    width: 90%;
+  }
+
+  &::before {
+    background: #1b1b1b;
+    background-image: linear-gradient(180deg, #fff 0, #1b1b1b 30px, #1b1b1b calc(100% - 30px), #fff);
+    border-radius: 4px;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 4px;
+
+    left: 18px;
+
+    @media only screen and (min-width: $two-columns-breakpoint) {
+      left: 50%;
+      margin-left: -2px;
+    }
+  }
+
+  &-element {
+    position: relative;
+    margin: 2em 0;
+
+    @media only screen and (min-width: $two-columns-breakpoint) {
+      margin: 4em 0;
+    }
+
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    &-icon {
+      border-radius: 50%;
+      @include mixins.box-shadow;
+      height: 40px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 40px;
+
+      @media only screen and (min-width: $two-columns-breakpoint) {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+      }
+
+      svg {
+        fill: currentColor;
+        display: block;
+        width: 24px;
+        height: 24px;
+        left: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+        position: relative;
+        top: 50%;
+      }
+    }
+
+    &-content {
+      @include mixins.box-shadow;
+      background: #fff;
+      border-radius: 0.25em;
+      margin-left: 60px;
+      padding: 1em;
+      position: relative;
+
+      &::after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+
+      @media only screen and (min-width: $two-columns-breakpoint) {
+        margin-left: 0;
+        padding: 1.5em;
+        width: 44%;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.334;
+        letter-spacing: 0em;
+        margin: 0;
+      }
+
+      h5 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: 0.0075em;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 1em 0 0;
+      }
+    }
+
+    @media only screen and (min-width: $two-columns-breakpoint) {
+      &:nth-child(2n) &-content {
+        float: right;
+      }
+    }
+
+    &-date {
+      color: #333;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      display: inline-block;
+      float: left;
+      opacity: 0.7;
+      padding: 0.8em 0;
+
+      @media only screen and (min-width: $two-columns-breakpoint) {
+        font-size: 1rem;
+        left: 124%;
+        position: absolute;
+        top: 6px;
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: $two-columns-breakpoint) {
+      &:nth-child(2n) &-date {
+        left: auto;
+        right: 124%;
+        text-align: right;
+      }
+    }
+  }
+}

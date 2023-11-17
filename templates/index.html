@@ -58,6 +58,28 @@
         </div>
       {% endfor %}
     </div>
+
+    <h3>Timeline</h3>
+
+    <div class="timeline">
+      {% for entry in page_data.timeline | reverse %}
+        <div class="timeline-element">
+          <span class="timeline-element-icon" style="background-color: {{ entry.background }}; color: {{ entry.foreground }};">
+            {{ load_data(path=entry.icon) | safe }}
+          </span>
+          <div class="timeline-element-content">
+            <h4>{{ entry.title }}</h4>
+            {% if entry.subtitle %}
+            <h5>{{ entry.subtitle }}</h5>
+            {% endif %}
+            <div>
+              {{ entry.content | striptags | markdown(inline=false) | safe }}
+            </div>
+            <span class="timeline-element-date">{{ entry.date }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
