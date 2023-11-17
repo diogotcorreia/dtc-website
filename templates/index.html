@@ -24,9 +24,42 @@
 
 <!-- about me -->
 
-{{ page_data.about_me | striptags | markdown(inline=false) | safe }}
+<div class="section" id="about-me">
+  <div class="container">
+    {{ page_data.about_me | striptags | markdown(inline=false) | safe }}
+  </div>
+</div>
 
 <!-- portfolio -->
+
+<div class="section-title" id="portfolio">
+  <h2>Portfolio</h2>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h3>My top projects</h3>
+
+    <div class="top-projects">
+      {% for top_project in page_data.top_projects %}
+        <div class="card" style="background-color: {{ top_project.background }}; color: {{ top_project.color }};">
+          <div class="card-content">
+            <img src="{{ get_url(path=top_project.icon) }}" alt="{{ top_project.name }}"/>
+            <h4>{{ top_project.name }}</h4>
+            <div>
+              {{ top_project.description | striptags | markdown(inline=false) | safe }}
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="{{ top_project.link }}" target="_blank" rel="noopener" class="button">
+              {{ top_project.calltoaction }}
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
 <!-- footer -->
 

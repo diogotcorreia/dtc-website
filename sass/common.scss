@@ -1,13 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
 body {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 
   background: #1b1b1b;
   color: #fff;
+
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+p {
+  margin: 0 0 1.45rem;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 24px;
+  padding: clamp(8px, 10%, 24px);
+  margin: auto;
+}
+
+.button {
+  padding: 4px 5px;
+  font-size: 0.8125rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  color: inherit;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
 }
 
 @import "./homepage.scss";
