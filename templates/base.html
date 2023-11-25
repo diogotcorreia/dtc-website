@@ -9,5 +9,50 @@
       {%- block content %}
       {%- endblock content %}
     </main>
+    <footer>
+      <div class="container footer-sections">
+        <div class="footer-section">
+          <h2>Contact me</h2>
+          <ul>
+            {% for social in config.extra.footer.socials %}
+              <li>
+                <span class="social-label">{{ social.label }}: </span>
+                <a
+                  href="{{ social.link }}"
+                  target="_blank"
+                  rel="noopener"
+                  data-umami-event="{{ social.name }}-social-footer"
+                >
+                  {{ social.value }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>Site map</h2>
+          <ul>
+            <li><a href="{{ get_url(path='/') }}#about-me">About me</a></li>
+            <li><a href="{{ get_url(path='/') }}#portfolio">Portfolio</a></li>
+            <li><a href="{{ get_url(path='/impossible-list') }}">Impossible List</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <p class="copyright-text">&copy; 2017-{{ now() | date(format="%Y") }} Diogo Torres Correia</p>
+          <p>
+            <a
+              href="{{ config.extra.footer.source_code }}"
+              target="_blank"
+              rel="noopener"
+              data-umami-event="source-code-footer"
+            >
+              Website Source Code
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,3 +1,9 @@
+$background: #1b1b1b;
+$backgroundDarker: #121212;
+$textColor: #fff;
+$linkColor: #037daf;
+$linkColorAlt: #00acff;
+
 * {
   box-sizing: border-box;
 }
@@ -9,8 +15,8 @@ html {
 body {
   margin: 0;
 
-  background: #1b1b1b;
-  color: #fff;
+  background: $background;
+  color: $textColor;
 
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 0.875rem;
@@ -25,7 +31,7 @@ p {
 }
 
 a {
-  color: #037daf;
+  color: $linkColor;
   text-decoration: none;
 }
 
@@ -56,6 +62,55 @@ strong {
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+footer {
+  ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  a {
+    color: $linkColorAlt;
+  }
+
+  h2 {
+    margin: .82rem 0 .656rem 0;
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 110%;
+  }
+
+  .footer-sections {
+    display: flex;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex-grow: 1;
+  }
+
+  .copyright {
+    background: $backgroundDarker;
+
+    p {
+      margin: 0;
+    }
+
+    .container {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      display: flex;
+      justify-content: space-between;
+
+      .copyright-text {
+        font-weight: 300;
+        font-size: 0.80rem;
+      }
+    }
   }
 }
 

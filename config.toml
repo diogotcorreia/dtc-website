@@ -20,4 +20,22 @@ build_search_index = true
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
+
+[extra.footer]
+source_code = "https://github.com/diogotcorreia/dtc-website"
+
+[[extra.footer.socials]]
+name = "mail"
+label = "Email"
+value = "me@diogotc.com"
+link = "mailto:me@diogotc.com"
+[[extra.footer.socials]]
+name = "discord"
+label = "Discord"
+value = "diogocorreia"
+link = "https://discord.com/users/218721510649626635"
+[[extra.footer.socials]]
+name = "twitter"
+label = "Twitter"
+value = "@diogotc2002"
+link = "https://twitter.com/diogotc2002"
