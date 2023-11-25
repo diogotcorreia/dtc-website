@@ -1,5 +1,4 @@
 $background: #1b1b1b;
-$backgroundDarker: #121212;
 $textColor: #fff;
 $linkColor: #037daf;
 $linkColorAlt: #00acff;
@@ -93,7 +92,7 @@ footer {
   }
 
   .copyright {
-    background: $backgroundDarker;
+    background: rgba(0, 0, 0, 0.3);
 
     p {
       margin: 0;

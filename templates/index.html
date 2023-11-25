@@ -1,4 +1,5 @@
 {%- extends "base.html" %}
+{%- import 'macros/particles.html' as macros_particles %}
 
 {%- block content %}
 {%- set page_data = section.extra %}
@@ -8,6 +9,7 @@
 
 <!-- splash -->
 
+{{- macros_particles::particles_dom(style="position: fixed; inset: 0; z-index: -10;") }}
 <div class="splash">
   {% set profile_picture = resize_image(path=page_data.profile_picture, width=100, height=100, op="fill") %}
   <img class="profile-picture" src="{{ profile_picture.url }}" alt="Profile image of {{ page_data.name }}" />
@@ -84,3 +86,8 @@
 </div>
 
 {% endblock content %}
+
+{% block scripts %}
+{{ super() }}
+{{- macros_particles::particles_script() }}
+{% endblock scripts %}
