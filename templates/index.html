@@ -17,9 +17,12 @@
   <h2>{{ page_data.subtitle }}</h2>
   <div class="socials">
     {% for social in page_data.socials %}
-    <a href="{{ social.link | default(value='') }}" target="_blank" rel="noopener" data-umami-event="{{ social.name }}-social-hero">
-      {{ load_data(path=social.icon) | safe }}
-    </a>
+    <div class="has-tooltip">
+      <a href="{{ social.link | default(value='') }}" target="_blank" rel="noopener" data-umami-event="{{ social.name }}-social-hero">
+        {{ load_data(path=social.icon) | safe }}
+      </a>
+      <span class="tooltip" tip-position="bottom">{{ social.label }}</span>
+    </div>
     {% endfor %}
   </div>
 </div>

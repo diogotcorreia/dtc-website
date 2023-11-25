@@ -1,5 +1,6 @@
 @use "mixins";
 @use "timeline";
+@import "./_tooltips.scss";
 
 .splash {
   min-height: 100vh;
