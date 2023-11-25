@@ -1,13 +1,15 @@
 {%- extends "base.html" %}
 {%- import 'macros/particles.html' as macros_particles %}
 
+{%- block head %}
+{{ super() }}
+{{- macros_seo::seo(config=config, title="Home") }}
+{%- endblock head %}
+
 {%- block content %}
 {%- set page_data = section.extra %}
-{{- macros_seo::seo(config=config) }}
 
-<!-- header -->
-
-<!-- splash -->
+{# splash #}
 
 {{- macros_particles::particles_dom(style="position: fixed; inset: 0; z-index: -10;") }}
 <div class="splash">
@@ -27,7 +29,7 @@
   </div>
 </div>
 
-<!-- about me -->
+{# about me #}
 
 <div class="section" id="about-me">
   <div class="container">
@@ -35,7 +37,7 @@
   </div>
 </div>
 
-<!-- portfolio -->
+{# portfolio #}
 
 <div class="section-title" id="portfolio">
   <h2>Portfolio</h2>

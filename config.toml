@@ -20,6 +20,7 @@ build_search_index = true
 highlight_code = true
 
 [extra]
+long_title = "Diogo Torres Correia"
 
 [extra.footer]
 source_code = "https://github.com/diogotcorreia/dtc-website"
