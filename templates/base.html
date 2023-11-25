@@ -1,11 +1,15 @@
 {%- import 'macros/seo.html' as macros_seo %}
+{%- import 'macros/navbar.html' as macros_navbar %}
 <!DOCTYPE html>
 <html lang="{{lang}}">
   <head>
     {%- include "partials/head.html" %}
   </head>
   <body>
-    <main>
+    <header>
+      {{- macros_navbar::navbar_dom() }}
+    </header>
+    <main id="top">
       {%- block content %}
       {%- endblock content %}
     </main>
@@ -32,9 +36,14 @@
         <div class="footer-section">
           <h2>Site map</h2>
           <ul>
-            <li><a href="{{ get_url(path='/') }}#about-me">About me</a></li>
-            <li><a href="{{ get_url(path='/') }}#portfolio">Portfolio</a></li>
-            <li><a href="{{ get_url(path='/impossible-list') }}">Impossible List</a></li>
+            {%- for link in config.extra.links %}
+            {%- if link.path is matching("^http[s]?://") %}
+            {%- set href = link.path %}
+            {%- else %}
+            {%- set href = get_url(path=link.path) %}
+            {%- endif %}
+            <li><a href="{{ href }}">{{ link.name }}</a></li>
+            {%- endfor %}
           </ul>
         </div>
       </div>
@@ -55,6 +64,7 @@
       </div>
     </footer>
     {%- block scripts %}
+    {{- macros_navbar::navbar_script() }}
     {%- endblock scripts %}
   </body>
 </html>

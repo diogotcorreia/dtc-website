@@ -39,3 +39,16 @@ name = "twitter"
 label = "Twitter"
 value = "@diogotc2002"
 link = "https://twitter.com/diogotc2002"
+
+[[extra.links]]
+name = "About Me"
+path = "/#about-me"
+[[extra.links]]
+name = "Portfolio"
+path = "/#portfolio"
+[[extra.links]]
+name = "Impossible List"
+path = "/impossible-list"
+[[extra.links]]
+name = "CV"
+path = "https://cv.diogotc.com"
