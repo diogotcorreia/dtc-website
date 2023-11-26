@@ -1,3 +1,13 @@
+[build]
+publish = "public"
+command = "zola build"
+
+[build.environment]
+ZOLA_VERSION = "0.17.2"
+
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
+
 [[redirects]]
 from = "/filosofia"
 to = "https://www.notion.so/diogocorreia/Filosofia-a5f4b4c525a4414abd3c2fe5dc6c3173"
