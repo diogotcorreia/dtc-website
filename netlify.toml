@@ -1,0 +1,29 @@
+[[redirects]]
+from = "/filosofia"
+to = "https://www.notion.so/diogocorreia/Filosofia-a5f4b4c525a4414abd3c2fe5dc6c3173"
+[[redirects]]
+from = "/portugues"
+to = "https://www.notion.so/diogocorreia/Portugu-s-7bbda19413b646929dbee7d607e1d14b"
+[[redirects]]
+from = "/matematica"
+to = "https://www.notion.so/diogocorreia/Matem-tica-d59aae8a9f4242a6a01454425defff7a"
+[[redirects]]
+from = "/fq"
+to = "https://www.notion.so/F-sica-e-Qu-mica-A-f61e9991cb984a7c83722a5bd50ad884"
+[[redirects]]
+from = "/fisica"
+to = "https://www.notion.so/diogocorreia/F-sica-095abaf4ed7549e68ff0ae8f2d7092bf"
+[[redirects]]
+from = "/remote"
+to = "https://chrome.google.com/webstore/detail/remote-for-google-slides/pojijacppbhikhkmegdoechbfiiibppi"
+[[redirects]]
+from = "/ist"
+to = "https://www.notion.so/diogocorreia/IST-b482a5ca9372416894721d0fa11e78d1"
+[[redirects]]
+from = "/.well-known/matrix/*"
+to = "https://m.diogotc.com/.well-known/matrix/:splat"
+
+[[headers]]
+for = "/.well-known/*"
+  [headers.values]
+  Access-Control-Allow-Origin = "*"
