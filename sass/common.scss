@@ -215,6 +215,8 @@ footer {
 
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap-reverse;
+      gap: 1em;
 
       .copyright-text {
         font-weight: 300;
