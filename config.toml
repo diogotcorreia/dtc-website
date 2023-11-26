@@ -3,7 +3,7 @@ base_url = "https://diogotc.com"
 
 # The site title and description; used in feeds by default.
 title = "Diogo Correia"
-description = ""
+description = "Hey, I'm Diogo Torres Correia from Portugal. I love programming, running, taking photos and learning new things!"
 
 # The default language; used in feeds.
 default_language = "en"
