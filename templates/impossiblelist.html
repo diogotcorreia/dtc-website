@@ -4,7 +4,7 @@
 
 {%- block head %}
 {{ super() }}
-{{- macros_seo::seo(config=config, title="Impossible List") }}
+{{- macros_seo::seo(config=config, title=page.title) }}
 {%- endblock head %}
 
 {%- block stylesheets %}
@@ -24,6 +24,7 @@
 
 <div class="section">
   <div class="container">
+    {{ page.content | safe }}
     {%- for category in page.extra.categories %}
     {{ macros_impossiblelist::category(category=category) }}
     {%- endfor %}

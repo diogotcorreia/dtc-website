@@ -1,4 +1,6 @@
 +++
+title = "Impossible List"
+description = "My Impossible List: an ever evolving list of things to achieve"
 template = "impossiblelist.html"
 
 [[extra.categories]]
@@ -263,3 +265,12 @@ name = "Places/Citites to Visit"
   [[extra.categories.goals]]
   name = "Los Angeles, USA"
 +++
+
+You might be wondering what an impossible list is and why it is here.
+In contrast with a bucket list, an impossible list is ever evolving and is expected
+to grow with time: you might cross things off the list, but you are also
+**always adding new items** to the list. It is, therefore, _impossible_
+to finish every single item in the list, hence the name.
+
+I'm keeping my list public to encourage myself to update it and to
+get other people to start their very own lists as well.
