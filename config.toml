@@ -1,0 +1,59 @@
+# The URL the site will be built for
+base_url = "https://diogotc.com"
+
+# The site title and description; used in feeds by default.
+title = "Diogo Correia"
+description = "Hey, I'm Diogo Torres Correia from Portugal. I love programming, running, taking photos and learning new things!"
+
+# The default language; used in feeds.
+default_language = "en"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# The default author for pages
+author = "Diogo Correia"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+long_title = "Diogo Torres Correia"
+favicon = "/assets/images/profile.jpg"
+
+[extra.footer]
+source_code = "https://github.com/diogotcorreia/dtc-website"
+
+[[extra.footer.socials]]
+name = "mail"
+label = "Email"
+value = "me@diogotc.com"
+link = "mailto:me@diogotc.com"
+[[extra.footer.socials]]
+name = "discord"
+label = "Discord"
+value = "diogocorreia"
+link = "https://discord.com/users/218721510649626635"
+[[extra.footer.socials]]
+name = "twitter"
+label = "Twitter"
+value = "@diogotc2002"
+link = "https://twitter.com/diogotc2002"
+
+[[extra.links]]
+name = "About Me"
+path = "/#about-me"
+[[extra.links]]
+name = "Portfolio"
+path = "/#portfolio"
+[[extra.links]]
+name = "Impossible List"
+path = "/impossiblelist"
+[[extra.links]]
+name = "CV"
+path = "https://cv.diogotc.com"

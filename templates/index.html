@@ -1,0 +1,104 @@
+{%- extends "base.html" %}
+{%- import 'macros/particles.html' as macros_particles %}
+
+{%- block head %}
+{{ super() }}
+{{- macros_seo::seo(config=config, title="Home") }}
+{%- endblock head %}
+
+{%- block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="{{ get_url(path='/homepage.css', trailing_slash=false, cachebust=true) }}" />
+{%- endblock stylesheets %}
+
+{%- block content %}
+{%- set page_data = section.extra %}
+
+{# splash #}
+
+{{- macros_particles::particles_dom(style="position: fixed; inset: 0; z-index: -10;") }}
+<div class="splash">
+  {% set profile_picture = resize_image(path=page_data.profile_picture, width=150, height=150, op="fill", format="webp") %}
+  <img class="profile-picture" src="{{ profile_picture.url }}" alt="Profile image of {{ page_data.name }}" />
+  <h1>{{ page_data.name }}</h1>
+  <h2>{{ page_data.subtitle }}</h2>
+  <div class="socials">
+    {% for social in page_data.socials %}
+    <div class="has-tooltip">
+      <a href="{{ social.link | default(value='') }}" target="_blank" rel="noopener" data-umami-event="{{ social.name }}-social-hero">
+        {{ load_data(path=social.icon) | safe }}
+      </a>
+      <span class="tooltip" tip-position="bottom">{{ social.label }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{# about me #}
+
+<div class="section" id="about-me">
+  <div class="container">
+    {{ page_data.about_me | striptags | markdown(inline=false) | safe }}
+  </div>
+</div>
+
+{# portfolio #}
+
+<div class="section-title" id="portfolio">
+  <h2>Portfolio</h2>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h3>My top projects</h3>
+
+    <div class="top-projects">
+      {% for top_project in page_data.top_projects %}
+        <div class="card" style="background-color: {{ top_project.background }}; color: {{ top_project.color }};">
+          <div class="card-content">
+            {% set project_img = resize_image(path=top_project.icon, width=110, height=110, op="fill", format="webp") %}
+            <img src="{{ project_img.url }}" alt="{{ top_project.name }}"/>
+            <h4>{{ top_project.name }}</h4>
+            <div>
+              {{ top_project.description | striptags | markdown(inline=false) | safe }}
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="{{ top_project.link }}" target="_blank" rel="noopener" class="button">
+              {{ top_project.calltoaction }}
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <h3>Timeline</h3>
+
+    <div class="timeline">
+      {% for entry in page_data.timeline | reverse %}
+        <div class="timeline-element">
+          <span class="timeline-element-icon" style="background-color: {{ entry.background }}; color: {{ entry.foreground }};">
+            {{ load_data(path=entry.icon) | safe }}
+          </span>
+          <div class="timeline-element-content">
+            <h4>{{ entry.title }}</h4>
+            {% if entry.subtitle %}
+            <h5>{{ entry.subtitle }}</h5>
+            {% endif %}
+            <div>
+              {{ entry.content | striptags | markdown(inline=false) | safe }}
+            </div>
+            <span class="timeline-element-date">{{ entry.date }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+{{ super() }}
+{{- macros_particles::particles_script() }}
+{% endblock scripts %}

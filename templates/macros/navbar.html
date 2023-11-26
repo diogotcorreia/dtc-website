@@ -1,0 +1,71 @@
+{%- macro navbar_script() %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // {# https://css-tricks.com/using-intersectionobserver-to-check-if-page-scrolled-past-certain-point/ #}
+    const navbar = document.querySelector("nav");
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].boundingClientRect.y < 0) {
+        navbar.classList.add("navbar--sticky");
+      } else {
+        navbar.classList.remove("navbar--sticky");
+      }
+    });
+    observer.observe(document.querySelector("#navbar-trigger"));
+
+    const drawer = document.getElementById("navbar-drawer");
+    const drawerOpenBtn = document.getElementById("drawer-open");
+    const drawerCloseBtn = document.getElementById("drawer-close");
+
+    drawerOpenBtn.addEventListener("click", () => {
+      drawer.showModal();
+    });
+    document.querySelectorAll("#drawer-close, #navbar-drawer a").forEach(element => {
+      element.addEventListener("click", () => {
+        drawer.close();
+      });
+    });
+  });
+</script>
+{%- endmacro %}
+
+{%- macro navbar_dom() %}
+<nav>
+  <div>
+    <button id="drawer-open" class="icon-button" aria-label="Open Navigation Drawer">
+      {{ load_data(path="/assets/icons/hamburger-menu.svg") | safe }}
+    </button>
+    <h1><a href="{{ get_url(path='/#top') }}">{{ config.title }}</a></h1>
+  </div>
+  <div>
+    {%- for link in config.extra.links %}
+    {%- if link.path is matching("^http[s]?://") %}
+    {%- set href = link.path %}
+    {%- else %}
+    {%- set href = get_url(path=link.path) %}
+    {%- endif %}
+    <a class="button--big" href="{{ href }}">
+      {{ link.name }}
+    </a>
+    {%- endfor %}
+  </div>
+</nav>
+<dialog id="navbar-drawer">
+  <button id="drawer-close" class="icon-button" aria-label="Close Navigation Drawer">
+    {{ load_data(path="/assets/icons/close.svg") | safe }}
+  </button>
+  <div class="navbar-drawer-links">
+    {%- for link in config.extra.links %}
+    {%- if link.path is matching("^http[s]?://") %}
+    {%- set href = link.path %}
+    {%- else %}
+    {%- set href = get_url(path=link.path) %}
+    {%- endif %}
+    <a class="button--big" href="{{ href }}">
+      {{ link.name }}
+    </a>
+    {%- endfor %}
+  </div>
+</dialog>
+<div id="navbar-trigger" style="position: absolute; width: 1px; height: 1px; top: 100px; left: 0;"></div>
+{%- endmacro %}
+

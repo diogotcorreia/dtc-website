@@ -1,0 +1,133 @@
+@use "mixins";
+@use "timeline";
+@import "./_tooltips.scss";
+
+.splash {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  /* TODO container styles */
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
+
+  h1 {
+    font-family: "Nunito", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .socials {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 24px;
+      fill: #fff;
+    }
+  }
+}
+
+.section {
+  background: #fff;
+  color: #000c;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include mixins.box-shadow;
+
+  h3 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+}
+
+.section-title {
+  padding: 75px 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    margin: 0;
+
+    font-size: 2.125rem;
+    font-weight: 400;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+  }
+}
+
+#about-me {
+  font-weight: 300;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 4px;
+  @include mixins.box-shadow;
+
+  .card-content {
+    padding: 16px;
+
+    flex-grow: 1;
+  }
+
+  .card-actions {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+  }
+}
+
+.top-projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+
+  .card {
+    width: clamp(50px, 100%, 350px);
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 10px auto;
+      display: block;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.0075em;
+      margin: 0;
+    }
+  }
+}

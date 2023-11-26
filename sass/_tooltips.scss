@@ -1,0 +1,64 @@
+@use "_mixins";
+
+$chipBackground: rgba(97, 97, 97, 0.9);
+$chipTextColor: #fff;
+
+// Inspired by https://web.dev/articles/building/a-tooltip-component
+// The version below allows for interacting with the text on the tooltip
+.tooltip {
+  pointer-events: none;
+  user-select: none;
+
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity .2s ease;
+
+  position: absolute;
+  z-index: 1;
+  inline-size: max-content;
+  max-inline-size: 25ch;
+  text-align: center;
+  font-size: 0.725rem;
+  font-weight: normal;
+  line-height: normal;
+  line-height: initial;
+  padding: 0.75ch 1.5ch;
+  inset-inline-start: 50%;
+  inset-block-start: calc(100% + 1ch);
+  margin: 0;
+  border-radius: 5px;
+  background: $chipBackground;
+  color: $chipTextColor;
+
+  @include mixins.box-shadow;
+
+  // add prose for screen readers and "bridge" to move mouse to tooltip
+  &::before {
+    content: "; Has tooltip: ";
+    height: 20px;
+    width: 30px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 15px);
+    right: calc(50% + 15px);
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.has-tooltip {
+  position: relative;
+}
+
+// trigger tooltip
+.has-tooltip:is(:hover, :focus-visible, :active) > .tooltip,
+.has-tooltip > a:is(:hover, :focus-visible, :active) + .tooltip {
+  opacity: 1;
+  transition-delay: 200ms;
+
+  pointer-events: unset;
+  user-select: unset;
+}
+

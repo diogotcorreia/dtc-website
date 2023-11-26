@@ -1,0 +1,58 @@
+@use "mixins";
+
+.splash {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    font-family: "Nunito", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+}
+
+.section {
+  background: #fff;
+  color: #000c;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include mixins.box-shadow;
+
+  h2 {
+    margin: 1em 0 0.3em 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+
+  li {
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    margin-bottom: 0.725rem;
+  }
+
+  li > ul {
+    margin-top: 0.3rem;
+
+    > li {
+      margin-bottom: 0.3rem;
+      list-style-type: disc;
+    }
+  }
+
+}

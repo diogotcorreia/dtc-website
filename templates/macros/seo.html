@@ -1,0 +1,86 @@
+{%- macro seo( config, title="", description="", is_404=false ) %}
+
+{%- if is_404 -%}
+  <meta name="robots" content="noindex, follow" />
+{%- else -%}
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+{%- endif -%}
+
+{% set profile_picture = resize_image(path=config.extra.favicon, width=32, height=32, op="fill", format="png") %}
+  <link rel="icon" href="{{ profile_picture.url }}" type="image/png">
+
+{%- if current_url %}
+  {%- set page_url = current_url %}
+{%- else %}
+  {%- set page_url = get_url(path="404.html", trailing_slash=true) %}
+{%- endif %}
+{%- if title %}
+  <title>{{ title }} | {{ config.extra.long_title }}</title>
+{%- else %}
+  <title>{{ config.extra.long_title }}</title>
+{%- endif %}
+  <meta property="og:title" content="{{ title }}" />
+  <meta name="twitter:title" content="{{ title }}" />
+
+{%- if config.extra.author %}
+  <meta name="author" content="{{ config.extra.author }}" />
+{%- endif %}
+  <meta name="copyright" content="{{ config.title }}" />
+{%- if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+{%- else %}
+  <meta name="description" content="{{ config.description }}" />
+  <meta property="og:description" content="{{ config.description }}" />
+  <meta name="twitter:description" content="{{ config.description}}" />
+{%- endif %}
+  <link rel="canonical" href="{{ page_url | safe }}" />
+  <meta property="og:url" content="{{ page_url | safe }}" />
+  <meta name="twitter:url" content="{{ page_url | safe }}" />
+{%- if page.extra.keywords and config.extra.keywords %}
+  <meta name="keywords" content="{{ page.extra.keywords }}, {{ config.extra.keywords }}" />
+{%- elif page.extra.keywords %}
+  <meta name="keywords" content="{{ page.extra.keywords }}" />
+{%- elif config.extra.keywords %}
+  <meta name="keywords" content="{{ config.extra.keywords }}" />
+{%- endif %}
+
+{%- if not is_404 %}
+
+{#- SEO MEDIA START #}
+{%- if page.extra.thumbnail %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail, trailing_slash=false) }}" />
+  <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail, trailing_slash=false) }}" />
+
+{%- elif page.extra.static_thumbnail %}
+  <meta name="twitter:card" content="summary_large_image" />
+  {%- if page.extra.static_thumbnail is matching("^http[s]?://") %}
+  <meta name="twitter:image" content="{{ page.extra.static_thumbnail }}" />
+  <meta property="og:image" content="{{ page.extra.static_thumbnail }}" />
+  {%- else %}
+  <meta name="twitter:image" content="{{ get_url(path=page.extra.static_thumbnail, trailing_slash=false) }}" />
+  <meta property="og:image" content="{{ get_url(path=page.extra.static_thumbnail, trailing_slash=false) }}" />
+  {%- endif %}
+
+{%- else %}
+  <meta name="twitter:card" content="summary" />
+
+{%- endif %}
+
+{#- SEO MEDIA END #}
+  <meta property="og:site_name" content="{{ config.title }}" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+{%- if page.updated %}
+  <meta property="og:updated_time" content="{{ page.updated | date(format='%F') }}" />
+{%- elif page.date %}
+  <meta property="og:updated_time" content="{{ page.date | date(format='%F') }}" />
+{%- endif %}
+
+{%- endif %}
+{#- Extra SEO END #}
+{%- endmacro %}

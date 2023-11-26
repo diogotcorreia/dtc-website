@@ -1,0 +1,39 @@
+{%- extends "base.html" %}
+{%- import 'macros/particles.html' as macros_particles %}
+{%- import 'macros/impossiblelist.html' as macros_impossiblelist %}
+
+{%- block head %}
+{{ super() }}
+{{- macros_seo::seo(config=config, title=page.title) }}
+{%- endblock head %}
+
+{%- block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="{{ get_url(path='/impossiblelist.css', trailing_slash=false, cachebust=true) }}" />
+{%- endblock stylesheets %}
+
+{%- block content %}
+
+{# splash #}
+
+{{- macros_particles::particles_dom(style="position: fixed; inset: 0; z-index: -10;") }}
+<div class="splash">
+  <h1>Impossible List</h1>
+  <h2>by {{ page.authors[0] | default(value=config.author) }}</h2>
+</div>
+
+<div class="section">
+  <div class="container">
+    {{ page.content | safe }}
+    {%- for category in page.extra.categories %}
+    {{ macros_impossiblelist::category(category=category) }}
+    {%- endfor %}
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+{{ super() }}
+{{- macros_particles::particles_script() }}
+{% endblock scripts %}
