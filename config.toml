@@ -14,6 +14,9 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# The default author for pages
+author = "Diogo Correia"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -50,7 +53,7 @@ name = "Portfolio"
 path = "/#portfolio"
 [[extra.links]]
 name = "Impossible List"
-path = "/impossible-list"
+path = "/impossiblelist"
 [[extra.links]]
 name = "CV"
 path = "https://cv.diogotc.com"

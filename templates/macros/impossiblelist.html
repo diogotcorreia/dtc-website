@@ -1,0 +1,73 @@
+{%- macro category(category) %}
+<h2>{{ category.name }}</h2>
+<ul>
+  {%- for goal in category.goals %}
+  {{ macros_impossiblelist::goal(goal=goal) }}
+  {%- endfor %}
+</ul>
+{%- endmacro %}
+
+{%- macro goal(goal) %}
+{%- set completed = goal.completed_date or goal.completed_custom_date or goal.time_log %}
+{%- if completed %}
+<li>
+  <s>{{ goal.name }}</s>
+  {%- if goal.completed_date %}
+  (<strong>{{ goal.completed_date | date(format="%-d %B %Y") }}</strong>)
+  {%- elif goal.completed_custom_date %}
+  (<strong>{{ goal.completed_custom_date }}</strong>)
+  {%- elif goal.time_log %}
+  {%- set best_time = goal.time_log | sort(attribute="value") | first %}
+  — Best time: <strong>{{ macros_impossiblelist::format_duration(duration=best_time.value) }}</strong>
+  on {{ best_time.date | date(format="%-d %B %Y") }}
+  {{ macros_impossiblelist::format_link(log=best_time) }}
+  {%- endif %}
+</li>
+{%- else %}
+<li>{{ goal.name }}</li>
+{%- endif %}
+<ul>
+  {%- for subgoal in goal.time_subgoals | default(value=[]) %}
+  {%- set time_log = goal.time_log | sort(attribute="value") | reverse %}
+  {%- for log_entry in time_log %}
+  {%- if log_entry.value <= subgoal %}
+  <li>
+    <s>≤ {{ macros_impossiblelist::format_duration(duration=subgoal) }}</s>
+    — Accomplished on
+    {{ log_entry.date | date(format="%-d %B %Y") }}
+    with a time of
+    <strong>{{ macros_impossiblelist::format_duration(duration=log_entry.value) }}</strong>
+    {{ macros_impossiblelist::format_link(log=log_entry) }}
+  </li>
+  {%- break %}
+  {%- elif loop.last %}
+  <li>≤ {{ macros_impossiblelist::format_duration(duration=subgoal) }}</li>
+  {%- endif %}
+  {%- endfor %}
+  {%- endfor %}
+</ul>
+{%- endmacro %}
+
+{%- macro format_duration(duration) %}
+{%- set hours = (duration / 3600) | round(method="floor") %}
+{%- set minutes = ((duration % 3600) / 60) | round(method="floor") %}
+{%- set seconds = (duration % 60) | round(precision=2) %}
+
+{%- if hours -%}
+{%- if hours < 10 -%}0{%- endif -%}{{ hours }}:
+{%- endif -%}
+{%- if minutes -%}
+{%- if minutes < 10 -%}0{%- endif -%}{{ minutes }}'
+{%- endif -%}
+{%- if seconds < 10 -%}0{%- endif -%}{{ seconds }}s
+{%- endmacro %}
+
+{%- macro format_link(log) %}
+{%- if log.link %}
+— <a href="{{ log.link }}" target="_blank" rel="noopener noreferer">View activity</a>
+{%- elif log.triathlon_links %}
+— <a href="{{ log.triathlon_links[0] }}" target="_blank" rel="noopener noreferer">Swimming Segment</a> |
+<a href="{{ log.triathlon_links[1] }}" target="_blank" rel="noopener noreferer">Cycling Segment</a> |
+<a href="{{ log.triathlon_links[2] }}" target="_blank" rel="noopener noreferer">Running Segment</a>
+{%- endif %}
+{%- endmacro %}
