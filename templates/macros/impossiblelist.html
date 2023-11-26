@@ -14,8 +14,10 @@
   <s>{{ goal.name }}</s>
   {%- if goal.completed_date %}
   (<strong>{{ goal.completed_date | date(format="%-d %B %Y") }}</strong>)
+  {{ macros_impossiblelist::format_link(log=goal) }}
   {%- elif goal.completed_custom_date %}
   (<strong>{{ goal.completed_custom_date }}</strong>)
+  {{ macros_impossiblelist::format_link(log=goal) }}
   {%- elif goal.time_log %}
   {%- set best_time = goal.time_log | sort(attribute="value") | first %}
   — Best time: <strong>{{ macros_impossiblelist::format_duration(duration=best_time.value) }}</strong>
@@ -66,7 +68,14 @@
 
 {%- macro format_link(log) %}
 {%- if log.link %}
-— <a href="{{ log.link }}" target="_blank" rel="noopener noreferer">View activity</a>
+{%- if log.link is matching("^https://(www\.)?strava\.com/") %}
+{%- set label = "View activity" %}
+{%- elif log.link is matching("^https://(www\.)?github\.com/") %}
+{%- set label = "View repository" %}
+{%- else %}
+{%- set label = "View website" %}
+{%- endif %}
+— <a href="{{ log.link }}" target="_blank" rel="noopener noreferer">{{ label }}</a>
 {%- elif log.triathlon_links %}
 — <a href="{{ log.triathlon_links[0] }}" target="_blank" rel="noopener noreferer">Swimming Segment</a> |
 <a href="{{ log.triathlon_links[1] }}" target="_blank" rel="noopener noreferer">Cycling Segment</a> |

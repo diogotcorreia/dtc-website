@@ -9,15 +9,32 @@ name = "Technology Goals"
   [[extra.categories.goals]]
   name = "Install Arch Linux"
   completed_date = "2021-01-22"
+  link = "https://github.com/diogotcorreia/dotfiles/tree/master"
+
+  [[extra.categories.goals]]
+  name = "Install NixOS"
+  completed_date = "2023-01-27"
+  link = "https://github.com/diogotcorreia/dotfiles/tree/nixos"
 
   [[extra.categories.goals]]
   name = "Implement CI/CD on a big project"
 
   [[extra.categories.goals]]
   name = "Ship an Electron App"
+  completed_date = "2020-09-07"
+  link = "https://github.com/livraria-papelaria-espaco/faturas-mega-to-keyboard/"
 
   [[extra.categories.goals]]
   name = "Code a mobile app with React Native"
+
+  [[extra.categories.goals]]
+  name = "Contribute to the Linux Kernel"
+
+  [[extra.categories.goals]]
+  name = "Contribute to a Linux Mobile project"
+
+  [[extra.categories.goals]]
+  name = "Contribute to an Android Custom ROM"
 
 [[extra.categories]]
 name = "Health/Sports Goals"
@@ -59,6 +76,11 @@ name = "Health/Sports Goals"
     date = "2018-12-31"
     link = "https://www.strava.com/activities/2047123379"
     value = 1_916
+
+    [[extra.categories.goals.time_log]]
+    date = "2020-01-11"
+    link = "https://www.strava.com/activities/3001812867"
+    value = 1_820
 
   [[extra.categories.goals]]
   name = "Run 10km"
@@ -207,15 +229,6 @@ name = "Health/Sports Goals"
     link = "https://www.strava.com/activities/4328742407"
 
 [[extra.categories]]
-name = 'Fun and/or "Insane" Goals'
-
-  [[extra.categories.goals]]
-  name = "Skydive"
-
-  [[extra.categories.goals]]
-  name = "Own a Tesla"
-
-[[extra.categories]]
 name = "Events to Attend"
 
   [[extra.categories.goals]]
@@ -238,32 +251,61 @@ name = "Gaming Goals"
   completed_date = "2018-09-06"
 
 [[extra.categories]]
-name = "Places/Citites to Visit"
+name = "Traveling"
 
   [[extra.categories.goals]]
-  name = "Paris, France"
+  name = "Visit Paris, France"
   completed_custom_date = "Easter 2016"
 
   [[extra.categories.goals]]
-  name = "Amsterdam, Netherlands"
+  name = "Visit Amsterdam, Netherlands"
   completed_custom_date = "Summer 2016"
 
   [[extra.categories.goals]]
-  name = "Saint Petersburg, Russia"
+  name = "Visit Saint Petersburg, Russia"
   completed_custom_date = "Summer 2018"
 
   [[extra.categories.goals]]
-  name = "Moscow, Russia"
+  name = "Visit Moscow, Russia"
   completed_custom_date = "Summer 2018"
 
   [[extra.categories.goals]]
-  name = "London, England"
+  name = "Visit London, England"
 
   [[extra.categories.goals]]
-  name = "New York City, USA"
+  name = "Visit New York City, USA"
 
   [[extra.categories.goals]]
-  name = "Los Angeles, USA"
+  name = "Visit Los Angeles, USA"
+
+  [[extra.categories.goals]]
+  name = "Visit Stockholm, Sweden"
+  completed_custom_date = "August 2023"
+
+  [[extra.categories.goals]]
+  name = "Obtain dual citizenship with another country"
+
+  [[extra.categories.goals]]
+  name = "See the Northen Lights"
+
+[[extra.categories]]
+name = "Life goals & Misc"
+
+  [[extra.categories.goals]]
+  name = "Own a house"
+
+  [[extra.categories.goals]]
+  name = "Own a car"
+
+  [[extra.categories.goals]]
+  name = "Get something named after me"
+
+  [[extra.categories.goals]]
+  name = "Have a positive impact in the world"
+
+  [[extra.categories.goals]]
+  name = "Start a blog"
+
 +++
 
 You might be wondering what an impossible list is and why it is here.
