@@ -21,6 +21,7 @@ highlight_code = true
 
 [extra]
 long_title = "Diogo Torres Correia"
+favicon = "/assets/images/profile.jpg"
 
 [extra.footer]
 source_code = "https://github.com/diogotcorreia/dtc-website"

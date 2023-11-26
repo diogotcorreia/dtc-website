@@ -8,6 +8,9 @@
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 {%- endif -%}
 
+{% set profile_picture = resize_image(path=config.extra.favicon, width=32, height=32, op="fill", format="png") %}
+  <link rel="icon" href="{{ profile_picture.url }}" type="image/png">
+
 {%- if current_url %}
   {%- set page_url = current_url %}
 {%- else %}
