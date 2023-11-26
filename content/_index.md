@@ -94,6 +94,20 @@ providing hosting and email services.
 Furthermore, I've coded some tools that helped speed labour-intensive tasks in-store.
 """
 
+[[extra.top_projects]]
+name = "Resumos LEIC"
+icon = "/assets/icons/resumos-leic.svg"
+link = "https://resumos.leic.pt"
+calltoaction = "Visit Website"
+background = "#434343"
+color = "#fff"
+description = """
+A completely open source website, dedicated to the creation of class notes
+focused on the courses in the curriculum of the BSc in Computer Science and
+Engineering at Técnico Lisboa, improving the academic performance of students.
+Currently, it achieves more than 30k monthly views across all pages.
+"""
+
 ############
 # TIMELINE #
 ############
@@ -289,14 +303,14 @@ The [source code is available on GitHub](https://github.com/livraria-papelaria-e
 """
 
 [[extra.timeline]]
-title = "Técnico"
+title = "Técnico Lisboa"
 subtitle = "Computer Science Degree"
 date = "October 2020"
 icon = "/assets/icons/tecnico.svg"
 background = "#009de0"
 foreground = "#fff"
 content = """
-I started university at [Instituto Superior Técnico](https://tecnico.ulisboa.pt).
+I started university at [Instituto Superior Técnico](https://tecnico.ulisboa.pt/en).
 """
 
 [[extra.timeline]]
@@ -315,17 +329,73 @@ how the internet works, HTML/CSS and a bit of JavaScript.
 """
 
 [[extra.timeline]]
+title = "Resumos LEIC"
+subtitle = "Community-driven class notes"
+date = "February 2021"
+icon = "/assets/icons/resumos-leic.svg"
+background = "#434343"
+foreground = "#fff"
+content = """
+During my time at Técnico Lisboa I've created a completely [open source website](https://resumos.leic.pt)
+to aggregate student's class notes of the courses in the curriculum of the BSc in Computer Science and Engineering,
+resulting in a high-quality wiki of multiple computer science subjects.
+Currently, it achieves more than 30k monthly views across all pages and has over 50 contributors.
+"""
+
+[[extra.timeline]]
 title = "DSI @ Técnico"
-subtitle = "Research Initiation Scholarship"
+subtitle = "Research Initiation Grant"
 date = "April 2021"
 icon = "/assets/icons/tecnico.svg"
 background = "#009de0"
 foreground = "#fff"
 content = """
 I joined [DSI](https://si.tecnico.ulisboa.pt/en/) (Técnico's IT services)
-through a schoolarship.  
-I am responsible for maintaining some projects directly linked to the university,
+through a research grant.  
+I was responsible for maintaining some projects directly linked to the university,
 such as [FenixEdu](https://github.com/FenixEdu/fenixedu-academic/commits?author=diogotcorreia).
+"""
+
+[[extra.timeline]]
+title = "Frigu"
+subtitle = "A Rust and Yew.rs (Web Assembly) app"
+date = "April 2022"
+icon = "/assets/icons/rust.svg"
+background = "#dea584"
+foreground = "#000"
+content = """
+This was my first Web Assembly application, made with Yew.rs for the
+frontend and Axum.rs for the backend.
+It was a [simple app to track purchases on a community fridge](https://github.com/diogotcorreia/frigu),
+keeping transaction history and balance of users, and
+was used for a while by ~10 people.
+"""
+
+[[extra.timeline]]
+title = "KTH"
+subtitle = "MSc Cybersecurity"
+date = "August 2023"
+icon = "/assets/icons/kth.svg"
+background = "#004791"
+foreground = "#fff"
+content = """
+I started a Cybersecurity Master programme at [KTH Royal Institute of Technology](https://kth.se/en)
+in Sweden 🇸🇪.
+"""
+
+[[extra.timeline]]
+title = "IST Delegate Election"
+subtitle = "Election app for Técnico's Pedagogical Council"
+date = "October 2023"
+icon = "/assets/icons/tecnico.svg"
+background = "#009de0"
+foreground = "#fff"
+content = """
+Since I was member of the Pedagogical Council in my last year at Técnico,
+I volunteered to re-build the delegate (student representative)
+[election platform](https://github.com/diogotcorreia/ist-delegate-election)
+using more modern technologies. It was built using Rust and React,
+which should result in a longer life span and need fewer maintenance.
 """
 
 +++

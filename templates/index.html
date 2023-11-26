@@ -56,8 +56,12 @@
       {% for top_project in page_data.top_projects %}
         <div class="card" style="background-color: {{ top_project.background }}; color: {{ top_project.color }};">
           <div class="card-content">
+            {%- if top_project.icon is matching("\.svg$") %}
+            <img src="{{ top_project.icon }}" alt="{{ top_project.name }}"/>
+            {%- else %}
             {% set project_img = resize_image(path=top_project.icon, width=110, height=110, op="fill", format="webp") %}
             <img src="{{ project_img.url }}" alt="{{ top_project.name }}"/>
+            {%- endif %}
             <h4>{{ top_project.name }}</h4>
             <div>
               {{ top_project.description | striptags | markdown(inline=false) | safe }}
