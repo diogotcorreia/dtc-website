@@ -22,7 +22,7 @@ name = "Health/Sports Goals"
 
   [[extra.categories.goals]]
   name = "Run 5km"
-  time_time_subgoals = [ 1_170, 1_140 ]
+  time_subgoals = [ 1_170, 1_140 ]
 
     [[extra.categories.goals.time_log]]
     date = "2018-06-16"

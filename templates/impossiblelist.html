@@ -7,6 +7,11 @@
 {{- macros_seo::seo(config=config, title="Impossible List") }}
 {%- endblock head %}
 
+{%- block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="{{ get_url(path='/impossiblelist.css', trailing_slash=false, cachebust=true) }}" />
+{%- endblock stylesheets %}
+
 {%- block content %}
 
 {# splash #}

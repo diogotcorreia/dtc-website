@@ -6,6 +6,11 @@
 {{- macros_seo::seo(config=config, title="Home") }}
 {%- endblock head %}
 
+{%- block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="{{ get_url(path='/homepage.css', trailing_slash=false, cachebust=true) }}" />
+{%- endblock stylesheets %}
+
 {%- block content %}
 {%- set page_data = section.extra %}
 

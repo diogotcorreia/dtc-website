@@ -9,8 +9,8 @@
 
 {%- macro goal(goal) %}
 {%- set completed = goal.completed_date or goal.completed_custom_date or goal.time_log %}
-{%- if completed %}
 <li>
+  {%- if completed %}
   <s>{{ goal.name }}</s>
   {%- if goal.completed_date %}
   (<strong>{{ goal.completed_date | date(format="%-d %B %Y") }}</strong>)
@@ -22,30 +22,32 @@
   on {{ best_time.date | date(format="%-d %B %Y") }}
   {{ macros_impossiblelist::format_link(log=best_time) }}
   {%- endif %}
-</li>
-{%- else %}
-<li>{{ goal.name }}</li>
-{%- endif %}
-<ul>
-  {%- for subgoal in goal.time_subgoals | default(value=[]) %}
-  {%- set time_log = goal.time_log | sort(attribute="value") | reverse %}
-  {%- for log_entry in time_log %}
-  {%- if log_entry.value <= subgoal %}
-  <li>
-    <s>≤ {{ macros_impossiblelist::format_duration(duration=subgoal) }}</s>
-    — Accomplished on
-    {{ log_entry.date | date(format="%-d %B %Y") }}
-    with a time of
-    <strong>{{ macros_impossiblelist::format_duration(duration=log_entry.value) }}</strong>
-    {{ macros_impossiblelist::format_link(log=log_entry) }}
-  </li>
-  {%- break %}
-  {%- elif loop.last %}
-  <li>≤ {{ macros_impossiblelist::format_duration(duration=subgoal) }}</li>
+  {%- else %}
+  {{ goal.name }}
   {%- endif %}
-  {%- endfor %}
-  {%- endfor %}
-</ul>
+  {%- if goal.time_subgoals %}
+  <ul>
+    {%- for subgoal in goal.time_subgoals | default(value=[]) %}
+    {%- set time_log = goal.time_log | sort(attribute="value") | reverse %}
+    {%- for log_entry in time_log %}
+    {%- if log_entry.value <= subgoal %}
+    <li>
+      <s>≤ {{ macros_impossiblelist::format_duration(duration=subgoal) }}</s>
+      — Accomplished on
+      {{ log_entry.date | date(format="%-d %B %Y") }}
+      with a time of
+      <strong>{{ macros_impossiblelist::format_duration(duration=log_entry.value) }}</strong>
+      {{ macros_impossiblelist::format_link(log=log_entry) }}
+    </li>
+    {%- break %}
+    {%- elif loop.last %}
+    <li>≤ {{ macros_impossiblelist::format_duration(duration=subgoal) }}</li>
+    {%- endif %}
+    {%- endfor %}
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</li>
 {%- endmacro %}
 
 {%- macro format_duration(duration) %}

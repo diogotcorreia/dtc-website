@@ -12,10 +12,3 @@
 {%- if config.generate_feed %}
 <link rel="alternate" type="{% if config.feed_filename is containing('atom') %}application/atom+xml{% else %}application/rss+xml{% endif %}" title="{{ config.title }} Atom/RSS Feed" href="{{ get_url(path=config.feed_filename, trailing_slash=false, lang=lang) | safe }}" />
 {%- endif %}
-
-{%- set stylesheets=config.extra.stylesheets | default(value=[ "common.css" ]) -%}
-{%- if stylesheets %}{%- for i in stylesheets %}
-<link rel="stylesheet" href="{{ get_url(path=i, trailing_slash=false, cachebust=true) | safe }}" />
-{%- endfor %}{%- endif %}
-
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Nunito&amp;display=swap" rel="stylesheet" crossorigin="anonymous" />

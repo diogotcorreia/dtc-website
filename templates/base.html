@@ -5,6 +5,10 @@
   <head>
     {%- block head %}
     {%- include "partials/head.html" %}
+    {%- block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Nunito&amp;display=swap" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ get_url(path='/common.css', trailing_slash=false, cachebust=true) }}" />
+    {%- endblock stylesheets %}
     {%- endblock head %}
   </head>
   <body>
