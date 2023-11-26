@@ -31,7 +31,7 @@
 {%- macro navbar_dom() %}
 <nav>
   <div>
-    <button id="drawer-open" class="icon-button">
+    <button id="drawer-open" class="icon-button" aria-label="Open Navigation Drawer">
       {{ load_data(path="/assets/icons/hamburger-menu.svg") | safe }}
     </button>
     <h1><a href="{{ get_url(path='/#top') }}">{{ config.title }}</a></h1>
@@ -50,7 +50,7 @@
   </div>
 </nav>
 <dialog id="navbar-drawer">
-  <button id="drawer-close" class="icon-button">
+  <button id="drawer-close" class="icon-button" aria-label="Close Navigation Drawer">
     {{ load_data(path="/assets/icons/close.svg") | safe }}
   </button>
   <div class="navbar-drawer-links">
