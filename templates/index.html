@@ -13,7 +13,7 @@
 
 {{- macros_particles::particles_dom(style="position: fixed; inset: 0; z-index: -10;") }}
 <div class="splash">
-  {% set profile_picture = resize_image(path=page_data.profile_picture, width=100, height=100, op="fill") %}
+  {% set profile_picture = resize_image(path=page_data.profile_picture, width=150, height=150, op="fill", format="webp") %}
   <img class="profile-picture" src="{{ profile_picture.url }}" alt="Profile image of {{ page_data.name }}" />
   <h1>{{ page_data.name }}</h1>
   <h2>{{ page_data.subtitle }}</h2>
@@ -51,7 +51,8 @@
       {% for top_project in page_data.top_projects %}
         <div class="card" style="background-color: {{ top_project.background }}; color: {{ top_project.color }};">
           <div class="card-content">
-            <img src="{{ get_url(path=top_project.icon) }}" alt="{{ top_project.name }}"/>
+            {% set project_img = resize_image(path=top_project.icon, width=110, height=110, op="fill", format="webp") %}
+            <img src="{{ project_img.url }}" alt="{{ top_project.name }}"/>
             <h4>{{ top_project.name }}</h4>
             <div>
               {{ top_project.description | striptags | markdown(inline=false) | safe }}
