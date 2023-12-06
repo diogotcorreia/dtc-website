@@ -40,10 +40,10 @@ label = "Discord"
 value = "diogocorreia"
 link = "https://discord.com/users/218721510649626635"
 [[extra.footer.socials]]
-name = "twitter"
-label = "Twitter"
-value = "@diogotc2002"
-link = "https://twitter.com/diogotc2002"
+name = "mastodon"
+label = "Mastodon"
+value = "@dtc@masto.pt"
+link = "https://masto.pt/@dtc"
 
 [[extra.links]]
 name = "About Me"
