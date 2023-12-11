@@ -17,6 +17,11 @@ build_search_index = true
 # The default author for pages
 author = "Diogo Correia"
 
+# The taxonomies to be rendered for the site and their configuration of the default languages
+taxonomies = [
+  {name = "tags", feed = true},
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -46,11 +51,11 @@ value = "@dtc@masto.pt"
 link = "https://masto.pt/@dtc"
 
 [[extra.links]]
-name = "About Me"
-path = "/#about-me"
+name = "Home"
+path = "/"
 [[extra.links]]
-name = "Portfolio"
-path = "/#portfolio"
+name = "Blog"
+path = "/blog"
 [[extra.links]]
 name = "Impossible List"
 path = "/impossiblelist"

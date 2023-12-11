@@ -28,7 +28,12 @@
   <meta name="author" content="{{ config.extra.author }}" />
 {%- endif %}
   <meta name="copyright" content="{{ config.title }}" />
-{%- if page.description %}
+
+{%- if description %}
+  <meta name="description" content="{{ description }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta name="twitter:description" content="{{ description }}" />
+{%- elif page.description %}
   <meta name="description" content="{{ page.description }}" />
   <meta property="og:description" content="{{ page.description }}" />
   <meta name="twitter:description" content="{{ page.description }}" />
