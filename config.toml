@@ -19,7 +19,7 @@ author = "Diogo Correia"
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
 taxonomies = [
-  {name = "tags", feed = true},
+  {name = "tags", feed = true, paginate_by = 10},
 ]
 
 [markdown]
