@@ -4,6 +4,10 @@
 {%- block head %}
 {{ super() }}
 {{- macros_seo::seo(config=config, title=page.title, description=page.summary | striptags | trim) }}
+{%- set section = get_section(path=page.ancestors | last) %}
+{% if section.generate_feed %}
+  <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=section.path ~ config.feed_filename) | safe }}">
+{% endif %}
 {%- endblock head %}
 
 {%- block stylesheets %}
@@ -51,6 +55,11 @@
       {{ page.content | safe }}
     </div>
   </article>
+  <div>
+    <a href="{{ get_url(path=section.path ~ config.feed_filename) | safe }}" style="display: inline-block; width: 2rem;" target="_blank">
+      {{ load_data(path="/assets/icons/rss.svg") | safe }}
+    </a>
+  </div>
 </div>
 
 {% endblock content %}
