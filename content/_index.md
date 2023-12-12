@@ -30,6 +30,11 @@ icon = "/assets/icons/discord.svg"
 label = "diogocorreia"
 link = "https://discord.com/users/218721510649626635"
 [[extra.socials]]
+name = "matrix"
+icon = "/assets/icons/matrix.svg"
+label = "@dtc:diogotc.com"
+link = "https://matrix.to/#/@dtc:diogotc.com"
+[[extra.socials]]
 name = "strava"
 icon = "/assets/icons/strava.svg"
 label = "Diogo Correia"

@@ -45,6 +45,11 @@ label = "Discord"
 value = "diogocorreia"
 link = "https://discord.com/users/218721510649626635"
 [[extra.footer.socials]]
+name = "matrix"
+label = "Matrix"
+value = "@dtc:diogotc.com"
+link = "https://matrix.to/#/@dtc:diogotc.com"
+[[extra.footer.socials]]
 name = "mastodon"
 label = "Mastodon"
 value = "@dtc@masto.pt"
