@@ -1,0 +1,26 @@
+{%- extends "base.html" %}
+
+{%- block head %}
+{{ super() }}
+{{- macros_seo::seo(config=config, title="Blog Tags") }}
+{%- endblock head %}
+
+{%- block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="{{ get_url(path='/blog.css', trailing_slash=false, cachebust=true) }}" />
+{%- endblock stylesheets %}
+
+{%- block content %}
+
+<div class="container post-list">
+  <h1>Tags</h1>
+  <ul>
+    {%- for term in terms %}
+    <li>
+      <a href="{{ term.permalink | safe }}">#{{ term.name }}</a> ({{ term.page_count }})
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,59 @@
+{%- extends "base.html" %}
+
+{%- block head %}
+{{ super() }}
+{{- macros_seo::seo(config=config, title="#" ~ term.name, description="{{ term.page_count }} posts available in #{{ term.name }}") }}
+{% if taxonomy.feed %}
+  <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=term.path ~ config.feed_filename) | safe }}">
+{% endif %}
+{%- endblock head %}
+
+{%- block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="{{ get_url(path='/blog.css', trailing_slash=false, cachebust=true) }}" />
+{%- endblock stylesheets %}
+
+{%- block content %}
+<div class="container post-list">
+  <h1>Posts in #{{ term.name }}</h1>
+  {%- for page in paginator.pages %}
+  <article>
+    <header>
+      <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+      <span>{{ page.date | date(format="%F") }} &middot; {{ page.reading_time }} minute read</span>
+    </header>
+    {%- if page.summary %}
+    <div>
+      {{ page.summary | safe }}
+      <nav><a href={{ page.permalink | safe }}>Read more&nbsp;&raquo;</a></nav>
+    </div>
+    {%- elif page.description %}
+    <div>
+      {{ page.description | striptags | markdown(inline=true) | safe }}
+      <nav><a href={{ page.permalink | safe }}>Read more&nbsp;&raquo;</a></nav>
+    </div>
+    {%- endif %}
+  </article>
+  {%- endfor %}
+  <nav class="paginator">
+    <p>
+      {% if paginator.previous %}
+        <a href="{{ paginator.previous }}">&laquo; Previous</a> |
+      {% endif %}
+      <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+      {% if paginator.next %}
+        | <a href="{{ paginator.next }}">Next &raquo;</a>
+      {% endif %}
+    </p>
+  </nav>
+  <div>
+    <a href="{{ get_url(path=term.path ~ config.feed_filename) | safe }}" style="display: inline-block; width: 2rem;" target="_blank">
+      {{ load_data(path="/assets/icons/rss.svg") | safe }}
+    </a>
+  </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock scripts %}
