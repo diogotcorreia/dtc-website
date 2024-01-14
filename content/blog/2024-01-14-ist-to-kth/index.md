@@ -303,7 +303,7 @@ status changed from Conditionally Admitted to Admitted.
 
 Following a few days of packing and sobby goodbyes, we got on our plane
 to Stockholm.
-Once we arrived, we picked but our keys at our house caretaker's office (for which
+Once we arrived, we picked up our keys at our house caretaker's office (for which
 we had scheduled an appointment beforehand) and went into our (very empty) rooms.
 
 {{ img(caption="Picking up our keys at SSSB", path="./sssb-key.jpg") }}
