@@ -155,6 +155,8 @@ recommendation letters, ideally one from a professional setting and another
 from an educational one.
 Since I worked at DSI (the Computer and Network Services at IST) at the time,
 I asked my direct supervisor for a letter.
+If you are not lucky enough to have professional experience yet, I'm sure two
+academic letters would be just fine as well.
 Picking a teacher to ask a recommendation letter was more complicated, but I
 ended up asking the teacher of the Computer Network course, which I was still
 attending at that date.
@@ -162,47 +164,185 @@ One thing to keep in mind while submitting these recommendation letters is that
 they must have contact details of the referees', such as their email, phone number
 and address (but you can probably get away with just the email).
 
-Lastly, we needed to write our motivation letters and our CV. This was obviously
+Lastly, we needed to write our motivation letters and our [CV]. This was obviously
 the most personal part of the application, and while it was a bit of work, it was
 easy to do with the time we had left.
 Additionally, KTH's student blog has some tips for writing motivation letters,
 which guided us through it.
 
-// TODO form; screenshots of submission; cluster
+![List of submitted documents on University Admissions](./university-admissions-submitted-docs.png)
 
-## Scholarships - A Failed Side Quest
+In addition to the documents above, most programs at KTH require you to submit a
+summary sheet, through KTH's website, which is basically a form with some additional
+information about your academic curriculum.
+
+With everything submitted, on February 1st, all that was left to do was to sit back
+and wait (for the next two months).
+
+![It was a long wait...](./waiting.gif)
+
+## Failed Side Quests
 
 In an effort to decrease the total costs of this adventure, I decided to apply
-to two scholarships here in Portugal.
+to two scholarships here in Portugal,
+[Postgraduate Fellowships Abroad by the "la Caixa" Foundation] and
+[Programa de Bolsas Huawei].
+Unfortunately, I did not pass the preselection stage for any of them,
+but it ended up not being a huge problem since tuition is free in Sweden for
+EU citizens.
 
-// TODO
+Additionally, while we were investigating KTH, we came across the CLUSTER
+consortium, of which both IST and KTH are a part of (at the time of writing).
+When we were applying, there was a ["Mutual Recognition of Titles" agreement],
+which stated:
+
+> [...] students with a Bachelor degree from a CLUSTER university will be treated
+> for admission to a Master’s program in another CLUSTER institution in the same
+> way as the local students of this institution. [...]
+
+We thought this could give us an advantage in the application, but after asking
+around, both at IST and at KTH, we did not get any satisfying response.
+To further solidify the answers we got, it seems that this agreement has been
+withdrawn from CLUSTER's website since.
+
+During the month of January, I also started the application process to
+TU/Eindhoven, but I did not plan on submitting it until after KTH's
+results were out.
 
 ## The Big Day
 
-// TODO
+With the results publication day rapidly approaching, we were getting excited!
+On the 15th of March, after 1.5 months of radio silence, the admission page
+changed to show that we were conditionally qualified on one of our applications,
+meaning all the documents were correct, but we still had to finish our bachelors.
+Then, the day after, the same thing happened to the other programme.
+It was quite a relief seeing that we had done everything correctly, but we
+still had 15 more days of waiting ahead of us.
+
+![Our application with the status "Conditionally Qualified"](./university-admissions-conditionally-qualified.png)
+
+Then, on the 28th of March, two days before the results, University Admissions
+started showing the message "YOUR APPLICATION IS LOCKED AS SELECTION IS
+CURRENTLY BEING RUN". Nerves were racking up at this point, and I could
+barely wait the remaining 48 hours.
+
+![Selection being run at University Admissions, two days before the results publication](./university-admissions-locked.png)
+
+Finally, the big day arrived. On the 30th of March, as I was taking the metro to go
+to university, at around 8:30 in the morning, I got a message from my friends saying
+the results were out. I opened the University Admissions website, that I had been
+furiously refreshing since I had woken up, and... nothing. It looked exactly the
+same as last time. After a few moments of confusion and some messages back and
+forth, I realised that I had to log out and log back in to be able to see the
+results. And sure enough, after I did that, I was presented with a wonderful
+green message saying "Conditionally Admitted"! Hooray!
+
+![The application page after being conditionally admitted](./university-admissions-conditionally-admitted.png)
+
+With a huge sigh of relief, the three of us had been admitted to our first
+option!
 
 ## In Search for Accommodation
 
-// TODO
+After the news wore off, we started tackling the task of moving to a new country.
+This included flights (which we booked in April, and managed to get a pretty
+good deal on the first flight, getting an executive ticket at the same price
+of the economy one, allowing us to take 2 checked bags plus a hand bag, which
+turned out to be immensely useful), but also finding out a place to stay
+during our studies.
+
+Since we were EU students, we cannot get accommodation through KTH and instead have
+to find our own.
+Therefore, our first thought was to find out a place for the three of us through
+the private market, so we searched on [Qasa], but, unfortunately, we could
+not find anything that was both affordable and close to campus.
+
+Fortunately, we had two other options that were geared towards students,
+[Akademisk kvart] and [SSSB].
+While we did not explore the former a lot, we had actually created an account
+with SSSB back in January, which offers **unfurnished** corridor rooms and apartments,
+so we were already accumulating credit days (up to a total of 90, which is the
+maximum you can get without starting your studies).
+Even though signing up in January is more than enough the have the 90 days by
+the summer, we later found out that the tie breaker seems to be when you signed
+up to the queue (I'm not actually sure, the wording on the website is a bit
+confusing), so perhaps that turned out to be of great help.
+Around June, listings for corridor rooms started to show up on their website.
+Since we were allowed to pick 3 different rooms per booking period (which lasted
+about half a week), we started by trying out various areas near the KTH main
+campus, but quickly realised it would be pretty difficult to get one that way.
+For that reason, we experimented with applying for rooms a bit further away,
+around 25-30 min by metro from campus, and, surely enough, after a few tries
+we all got one in the same building.
 
 ## Remaining Documents
 
-// TODO
+After finishing the bachelor, we had until the 31st of October to submit our
+diploma (or equivalent). Anticipating the closure of the Graduate Area during
+the first half of the month of August, we sent the requests right after we
+got all of our grades on Fénix (IST's learning management system), on the
+11th of July.
+
+For future reference, the diploma is called "Certidão de Registo" (38€), but
+it takes about an year to be issued. Since we did not have that time,
+we had to request a "Certidão de Conclusão" (60€), which has all the required
+information but is issued in a maximum of 90 working days.
+
+To get these documents, one has to fill out [R03 - Requerimento Registo de Grau]
+as in the picture below, and send it to AG's email address:
+
+![R03 form filled out to get the required documents](./r03-ag.png)
+
+About a month after, on the 16th of August, I got the document I needed and
+submitted it to University Admissions, and, a few days later, my application
+status changed from Conditionally Admitted to Admitted.
 
 ## Bye, Portugal
 
-// TODO
+Following a few days of packing and sobby goodbyes, we got on our plane
+to Stockholm.
+Once we arrived, we picked our keys at our house caretaker's office (which we
+had booked beforehand) and went into our (very empty) rooms.
+
+![Picking up our keys at SSSB](./sssb-key.jpg)
+
+Then, the day after, we went to KTH to get our accounts set up at KTH Entré.
+
+![My first time at KTH, on a usual cloudy summer day in Stockholm](./kth.jpg)
+
+There are, obviously, a lot more stories to tell about the move in process,
+and about my experience at KTH so far, but those will not fit into this blog post.
 
 ## Final Thoughts
 
-// TODO
+All things considered, I have to thank IST for unintentionally pushing
+me to pursue this amazing opportunity that I almost let through due to laziness.
+I have zero regrets of the choices that I made regarding my masters, and I am
+enjoying my time at KTH and in Cybersecurity so far.
+Furthermore, I have to thank my friends and family for supporting me
+before, during and after the application process and this entire journey.
 
-[MSc Cybersecurity at KTH]: https://www.kth.se/en/studies/master/cybersecurity
-[UvAmsterdam]: https://www.uva.nl/en
+As a final note, if you, the person reading this, is in the same position as I
+was a year ago and is applying to KTH, I hope that this post helped you and
+I wish you good luck in your application process.
+Feel free to get in touch if you have any questions and, if you get in, hit
+me up for some [fika].
+
+[MSc Cybersecurity at KTH]: https://www.kth.se/en/studies/master/cybersecurity/
+[UvAmsterdam]: https://www.uva.nl/en/
 [TU/Delft]: https://www.tudelft.nl/en/
 [TUMunich]: https://www.tum.de/en/
 [TU/Eindhoven]: https://www.tue.nl/en/
 [IELTS Academic]: https://takeielts.britishcouncil.org/
-[English Exam Centre]: https://www.englishexamcentre.pt
-[University Admissions]: https://www.universityadmissions.se
-[R01 - Requerimento Certidão]: http://graduacao.tecnico.ulisboa.pt/formularios/
+[English Exam Centre]: https://www.englishexamcentre.pt/
+[University Admissions]: https://www.universityadmissions.se/
+[R01 - Requerimento Certidão]: https://graduacao.tecnico.ulisboa.pt/formularios/
+[CV]: https://github.com/diogotcorreia/cv/tree/msc-applications
+[Postgraduate Fellowships Abroad by the "la Caixa" Foundation]: https://web.archive.org/web/20221221070120/https://fundacaolacaixa.pt/pt/bolsas-pos-graduacao-no-estrangeiro-concurso
+[Programa de Bolsas Huawei]: https://web.archive.org/web/20230123092405/https://programadebolsashuawei.pt/
+["Mutual Recognition of Titles" agreement]: https://web.archive.org/web/20230104094730/https://cluster.org/projects-activities/agreements/
+[Qasa]: https://qasa.se/p2/en/
+[Akademisk kvart]: https://akademiskkvart.se/en/
+[SSSB]: https://sssb.se/en/
+[R03 - Requerimento Registo de Grau]: https://graduacao.tecnico.ulisboa.pt/formularios/
+[fika]: https://en.wikipedia.org/wiki/Fika_(Sweden)
