@@ -305,6 +305,8 @@ name = "Life goals & Misc"
 
   [[extra.categories.goals]]
   name = "Start a blog"
+  completed_date = "2023-12-12"
+  link = "https://diogotc.com/blog/"
 
 +++
 
