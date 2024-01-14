@@ -104,7 +104,7 @@ The first step was to book an English exam.
 I opted for the [IELTS Academic] since one of my friends had already picked that
 one and, more importantly, I would get the results before the end of the month.
 For that reason, I booked the test for the 22<sup>nd</sup> of January and got the results
-on the 26th.
+on the 26<sup>th</sup>.
 However, I was later made aware that taking the C2 Proficiency (CPE) exam at
 [English Exam Centre] would have been cheaper, but I'm not sure if I could have
 gotten the results on time.
@@ -145,7 +145,7 @@ as in the picture below, and send it to AG's email address:
 {{ img(caption="R01 form filled out to get the required documents", path="./r01-ag.png") }}
 
 To our surprise, we got the documents quite quickly, having submitted the
-request on the 6<sup>th</sup> and received them on the 12th.
+request on the 6<sup>th</sup> and received them on the 12<sup>th</sup>.
 With the bureaucratic stuff out of the way, we now needed to focus on the
 recommendation and motivation letters.
 
@@ -177,7 +177,7 @@ In addition to the documents above, most programs at KTH require you to submit a
 summary sheet, through KTH's website, which is basically a form with some additional
 information about your academic curriculum.
 
-With everything submitted, on February 1st, all that was left to do was to sit back
+With everything submitted, on February 1<sup>st</sup>, all that was left to do was to sit back
 and wait (for the next two months).
 
 {{ img(caption="It was a long wait...", path="./waiting.gif") }}
