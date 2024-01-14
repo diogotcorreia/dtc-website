@@ -142,7 +142,7 @@ were only up to the second semester of the second year.
 For future reference, to get these documents, one needs to fill out [R01 - Requerimento Certidão]
 as in the picture below, and send it to AG's email address:
 
-![R01 form filled out to get the required documents](./r01-ag.png)
+{{ img(caption="R01 form filled out to get the required documents", path="./r01-ag.png") }}
 
 To our surprise, we got the documents quite quickly, having submitted the
 request on the 6<sup>th</sup> and received them on the 12th.
@@ -171,7 +171,7 @@ easy to do with the time we had left.
 Additionally, KTH's student blog has some tips for writing motivation letters,
 which guided us through it.
 
-![List of submitted documents on University Admissions](./university-admissions-submitted-docs.png)
+{{ img(caption="List of submitted documents on University Admissions", path="./university-admissions-submitted-docs.png") }}
 
 In addition to the documents above, most programs at KTH require you to submit a
 summary sheet, through KTH's website, which is basically a form with some additional
@@ -180,7 +180,7 @@ information about your academic curriculum.
 With everything submitted, on February 1st, all that was left to do was to sit back
 and wait (for the next two months).
 
-![It was a long wait...](./waiting.gif)
+{{ img(caption="It was a long wait...", path="./waiting.gif") }}
 
 ## Failed Side Quests
 
@@ -220,14 +220,14 @@ Then, the day after, the same thing happened to the other programme.
 It was quite a relief seeing that we had done everything correctly, but we
 still had 15 more days of waiting ahead of us.
 
-![Our application with the status "Conditionally Qualified"](./university-admissions-conditionally-qualified.png)
+{{ img(caption="Our application with the status "Conditionally Qualified"", path="./university-admissions-conditionally-qualified.png") }}
 
 Then, on the 28<sup>th</sup> of March, two days before the results, University Admissions
 started showing the message "YOUR APPLICATION IS LOCKED AS SELECTION IS
 CURRENTLY BEING RUN". Nerves were racking up at this point, and I could
 barely wait the remaining 48 hours.
 
-![Selection being run at University Admissions, two days before the results publication](./university-admissions-locked.png)
+{{ img(caption="Selection being run at University Admissions, two days before the results publication", path="./university-admissions-locked.png") }}
 
 Finally, the big day arrived. On the 30<sup>th</sup> of March, as I was taking the metro to go
 to university, at around 8:30 in the morning, I got a message from my friends saying
@@ -238,7 +238,7 @@ forth, I realised that I had to log out and log back in to be able to see the
 results. And sure enough, after I did that, I was presented with a wonderful
 green message saying "Conditionally Admitted"! Hooray!
 
-![The application page after being conditionally admitted](./university-admissions-conditionally-admitted.png)
+{{ img(caption="The application page after being conditionally admitted", path="./university-admissions-conditionally-admitted.png") }}
 
 With a huge sigh of relief, the three of us had been admitted to our first
 option!
@@ -293,7 +293,7 @@ requested alongside the aforementioned diploma.
 To get these documents, one has to fill out [R03 - Requerimento Registo de Grau]
 as in the picture below, and send it to AG's email address:
 
-![R03 form filled out to get the required documents](./r03-ag.png)
+{{ img(caption="R03 form filled out to get the required documents", path="./r03-ag.png") }}
 
 About a month later, on the 16<sup>th</sup> of August, I got the document I needed and
 submitted it to University Admissions, and, a few days later, my application
@@ -306,11 +306,11 @@ to Stockholm.
 Once we arrived, we picked but our keys at our house caretaker's office (for which
 we had scheduled an appointment beforehand) and went into our (very empty) rooms.
 
-![Picking up our keys at SSSB](./sssb-key.jpg)
+{{ img(caption="Picking up our keys at SSSB", path="./sssb-key.jpg") }}
 
 Then, the day after, we went to KTH to get our accounts set up at KTH Entré.
 
-![My first time at KTH, on a usual cloudy summer day in Stockholm](./kth.jpg)
+{{ img(caption="My first time at KTH, on a usual cloudy summer day in Stockholm", path="./kth.jpg") }}
 
 There are, obviously, a lot more stories to tell about the move-in process,
 and about my experience at KTH so far, but those will not fit into this blog post.
@@ -328,7 +328,7 @@ As a final note, if you, the person reading this, is in the same position as I
 was a year ago and is applying to KTH, I hope that this post helped you and
 I wish you good luck in your application process.
 Feel free to get in touch if you have any questions and, if you get in, hit
-me up for some [fika]. :smile:
+me up for some [fika]. :sweden:
 
 [MSc Cybersecurity at KTH]: https://www.kth.se/en/studies/master/cybersecurity/
 [UvAmsterdam]: https://www.uva.nl/en/
