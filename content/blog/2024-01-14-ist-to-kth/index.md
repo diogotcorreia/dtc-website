@@ -220,7 +220,7 @@ Then, the day after, the same thing happened to the other programme.
 It was quite a relief seeing that we had done everything correctly, but we
 still had 15 more days of waiting ahead of us.
 
-{{ img(caption="Our application with the status "Conditionally Qualified"", path="./university-admissions-conditionally-qualified.png") }}
+{{ img(caption='Our application with the status "Conditionally Qualified"', path="./university-admissions-conditionally-qualified.png") }}
 
 Then, on the 28<sup>th</sup> of March, two days before the results, University Admissions
 started showing the message "YOUR APPLICATION IS LOCKED AS SELECTION IS
