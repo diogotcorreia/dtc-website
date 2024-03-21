@@ -32,6 +32,9 @@ to = "https://www.notion.so/diogocorreia/IST-b482a5ca9372416894721d0fa11e78d1"
 [[redirects]]
 from = "/.well-known/matrix/*"
 to = "https://m.diogotc.com/.well-known/matrix/:splat"
+[[redirects]]
+from = "/.well-known/openpgpkey/hu/*"
+to = "https://openpgpkey.diogotc.com/.well-known/openpgpkey/diogotc.com/hu/:splat"
 
 [[headers]]
 for = "/.well-known/*"
