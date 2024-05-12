@@ -3,6 +3,16 @@ title = "openECSC 2024 Round 2 Write-up: GoSweeper"
 
 [taxonomies]
 tags = ["ctf", "ctf-writeup", "web", "golang", "xsleaks"]
+
+[extra]
+preface = """
+_This write-up was placed in the top 3 of the best write-up competition for
+openECSC 2024 Round 2, and is now
+[published on their website](https://ecsc2024.it/openECSC/round-2/writeups/gosweeper)
+as well._
+
+---
+"""
 +++
 
 This is a write-up of the "GoSweeper" challenge from Round 2 of openECSC 2024.
