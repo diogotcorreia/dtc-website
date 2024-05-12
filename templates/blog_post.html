@@ -31,6 +31,11 @@
       {%- endif %}
     </header>
     <div>
+      {% if page.extra.preface %}
+      <div class="preface">
+        {{ page.extra.preface | striptags | markdown(inline=true) | safe }}
+      </div>
+      {% endif %}
       {% if page.toc %}
       <div class="table-of-contents">
         <ul>
