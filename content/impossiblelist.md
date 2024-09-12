@@ -118,9 +118,21 @@ name = "Health/Sports Goals"
 
   [[extra.categories.goals]]
   name = "Run 15km"
+  time_subgoals = [ 3_600 ]
+
+    [[extra.categories.goals.time_log]]
+    date = "2024-09-07"
+    link = "https://www.strava.com/activities/12350607900"
+    value = 3_831
 
   [[extra.categories.goals]]
   name = "Run 21km (half marathon)"
+  time_subgoals = [ 5_400 ]
+
+    [[extra.categories.goals.time_log]]
+    date = "2024-09-07"
+    link = "https://www.strava.com/activities/12350607900"
+    value = 5_686
 
   [[extra.categories.goals]]
   name = "Run 42km (marathon)"
