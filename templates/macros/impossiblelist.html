@@ -60,7 +60,7 @@
 {%- if hours -%}
 {%- if hours < 10 -%}0{%- endif -%}{{ hours }}:
 {%- endif -%}
-{%- if minutes -%}
+{%- if hours or minutes -%}
 {%- if minutes < 10 -%}0{%- endif -%}{{ minutes }}'
 {%- endif -%}
 {%- if seconds < 10 -%}0{%- endif -%}{{ seconds }}s
