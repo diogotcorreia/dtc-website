@@ -299,6 +299,7 @@ name = "Traveling"
 
   [[extra.categories.goals]]
   name = "See the Northen Lights"
+  completed_date = "2024-11-03"
 
 [[extra.categories]]
 name = "Life goals & Misc"
