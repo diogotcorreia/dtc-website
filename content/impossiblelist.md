@@ -298,7 +298,7 @@ name = "Traveling"
   name = "Obtain dual citizenship with another country"
 
   [[extra.categories.goals]]
-  name = "See the Northen Lights"
+  name = "See the Northern Lights"
   completed_date = "2024-11-03"
 
 [[extra.categories]]
