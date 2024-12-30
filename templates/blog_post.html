@@ -4,9 +4,16 @@
 {{ super() }}
 {{- macros_seo::seo(config=config, title=page.title, description=page.summary | striptags | trim) }}
 {%- set section = get_section(path=page.ancestors | last) %}
-{% if section.generate_feed %}
-  <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=section.path ~ config.feed_filename) | safe }}">
-{% endif %}
+{%- if section.generate_feeds -%}
+  {%- for feed in config.feed_filenames -%}
+    {%- if feed is containing('atom') -%}
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="{{ get_url(path=section.path ~ feed, trailing_slash=false) | safe }}" />
+    {%- endif -%}
+    {%- if feed is containing('rss') -%}
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ get_url(path=section.path ~ feed, trailing_slash=false) | safe }}" />
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 {%- endblock head %}
 
 {%- block stylesheets %}
@@ -60,9 +67,15 @@
     </div>
   </article>
   <div>
-    <a href="{{ get_url(path=section.path ~ config.feed_filename) | safe }}" style="display: inline-block; width: 2rem;" target="_blank">
-      {{ load_data(path="/assets/icons/rss.svg") | safe }}
-    </a>
+    {%- if section.generate_feeds -%}
+      {%- for feed in config.feed_filenames -%}
+        {%- if feed is containing('atom') -%}
+        <a href="{{ get_url(path=section.path ~ feed) | safe }}" style="display: inline-block; width: 2rem;" target="_blank">
+          {{ load_data(path="/assets/icons/rss.svg") | safe }}
+        </a>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
   </div>
 </div>
 

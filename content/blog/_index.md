@@ -9,5 +9,5 @@ page_template = "blog_post.html"
 paginate_by = 10
 paginate_reversed = false
 
-generate_feed = true
+generate_feeds = true
 +++

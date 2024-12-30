@@ -22,6 +22,12 @@ taxonomies = [
   {name = "tags", feed = true, paginate_by = 10},
 ]
 
+# The filenames to use for the feeds. Used as the template filenames, too.
+feed_filenames = [
+  "atom.xml",
+  "rss.xml",
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
