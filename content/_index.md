@@ -54,6 +54,11 @@ name = "mail"
 icon = "/assets/icons/mail.svg"
 label = "me@diogotc.com"
 link = "mailto:me@diogotc.com"
+[[extra.socials]]
+name = "mail"
+icon = "/assets/icons/gpg.svg"
+label = "GPG Key"
+link = "https://gpg.diogotc.com"
 
 ################
 # TOP PROJECTS #

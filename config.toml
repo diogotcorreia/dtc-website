@@ -80,6 +80,11 @@ name = "mastodon"
 label = "Mastodon"
 value = "@dtc@masto.pt"
 link = "https://masto.pt/@dtc"
+[[extra.footer.socials]]
+name = "gpg"
+label = "GPG Key"
+value = "0x12CF31FDFF172B77"
+link = "https://gpg.diogotc.com"
 
 [[extra.links]]
 name = "Home"
