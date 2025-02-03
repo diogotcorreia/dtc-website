@@ -35,6 +35,15 @@ to = "https://m.diogotc.com/.well-known/matrix/:splat"
 [[redirects]]
 from = "/.well-known/openpgpkey/hu/*"
 to = "https://openpgpkey.diogotc.com/.well-known/openpgpkey/diogotc.com/hu/:splat"
+# redirects for rexcantor64.com domain
+[[redirects]]
+from = "https://rexcantor64.com/*"
+to = "https://diogotc.com/:splat"
+force = true
+[[redirects]]
+from = "https://www.rexcantor64.com/*"
+to = "https://diogotc.com/:splat"
+force = true
 
 [[headers]]
 for = "/.well-known/*"
