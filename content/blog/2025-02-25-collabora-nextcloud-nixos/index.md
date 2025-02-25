@@ -149,7 +149,7 @@ If so, congratulations, you are ready to move into the next step!
 Integrating this with Nextcloud is also pretty straightforward, but it's a bit more
 cumbersome to set the configuration options declaratively.
 
-Firstly, we need to install the [Nextcloud Office](nc-richdocuments) app, also
+Firstly, we need to install the [Nextcloud Office][nc-richdocuments] app, also
 known as `richdocuments`.
 If you can't be bothered to do this declaratively, it is as simple as going into Nextcloud,
 opening the Apps page, going to the "Office & text" category and clicking the "Download and enable"
