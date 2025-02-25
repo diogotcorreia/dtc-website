@@ -199,3 +199,13 @@ details {
   }
 }
 
+.disclaimer {
+  margin-top: 1em;
+  text-align: center;
+  opacity: 0.4;
+  transition: all 0.5s;
+}
+
+.disclaimer:hover {
+  opacity: 1;
+}
