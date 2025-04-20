@@ -408,4 +408,19 @@ using more modern technologies. It was built using Rust and React,
 which should result in a longer life span and need fewer maintenance.
 """
 
+[[extra.timeline]]
+title = "Research Assistant"
+subtitle = "LangSec Group @ KTH"
+date = "September 2024"
+icon = "/assets/icons/kth.svg"
+background = "#004791"
+foreground = "#fff"
+content = """
+I worked as a research assistant at the LangSec group at KTH, where I
+investigated the impact and prevalence of client-side prototype pollution
+in JavaScript in various websites.
+As part of this work, I developed a [Chromium fork](https://github.com/diogotcorreia/ghunter4chrome)
+to detect prototype pollution gadgets when a vulnerable website is visited.
+"""
+
 +++
