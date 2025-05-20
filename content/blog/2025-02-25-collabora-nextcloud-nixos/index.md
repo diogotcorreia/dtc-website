@@ -221,7 +221,6 @@ and sets these options:
     '';
     serviceConfig = {
       Type = "oneshot";
-      User = "nextcloud";
     };
   };
 }
@@ -275,6 +274,12 @@ Nextcloud instance using NixOS, which, thanks to the amazing work of nixpkgs
 maintainers, is very straightforward.
 I also hope you've learnt a bit more about how WOPI works instead of it being
 just :sparkles: magic :sparkles:.
+
+---
+
+**Update 2025-05-21:** The codeblock for the `nextcloud-config-collabora` systemd unit
+has been updated to work on NixOS 25.05 given the credential handling changes.
+The only change was making the unit run as root instead of as the nextcloud user.
 
 
 [Collabora Online]: https://www.collaboraonline.com/
