@@ -151,36 +151,33 @@ a > code {
   text-decoration-thickness: 2px;
 }
 
-pre {
-  padding: 1rem;
-  overflow: auto;
+.giallo {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  overflow-x: auto;
   border-radius: 0.5rem;
 
-  &[data-linenos] {
-    padding-left: 0.5rem;
-  }
-  table td {
-    padding: 0;
-  }
-  table td:nth-of-type(1) {
-    text-align: right;
-    user-select: none;
-    padding-right: 0.8em;
-    opacity: 0.7;
-  }
-  mark {
+  &> code {
     display: block;
-    color: inherit;
     min-width: fit-content;
-    margin-left: -1rem;
-    padding-left: 1rem;
-    margin-right: -1rem;
-    padding-right: 1rem;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+}
+.giallo-l {
+  display: inline-block;
+  min-height: 1lh;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.giallo-ln {
+  display: inline-block;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0.4em;
+  padding-left: 0;
+  min-width: 3ch;
+  text-align: right;
+  opacity: 0.8;
 }
 
 details {
