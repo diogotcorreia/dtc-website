@@ -95,3 +95,6 @@ path = "/impossiblelist"
 [[extra.links]]
 name = "CV"
 path = "https://cv.diogotc.com"
+
+[extra.authors."Diogo Correia"]
+fediverse = "@dtc@masto.pt"

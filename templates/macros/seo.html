@@ -1,4 +1,4 @@
-{%- macro seo( config, title="", description="", is_404=false ) %}
+{%- macro seo( config, title="", description="", authors=false, is_404=false ) %}
 
 {%- if is_404 -%}
   <meta name="robots" content="noindex, follow" />
@@ -24,8 +24,16 @@
   <meta property="og:title" content="{{ title }}" />
   <meta name="twitter:title" content="{{ title }}" />
 
-{%- if config.extra.author %}
-  <meta name="author" content="{{ config.extra.author }}" />
+{%- if authors %}
+  {%- set first_author = authors | first %}
+{%- else %}
+  {%- set first_author = config.author %}
+{%- endif %}
+{%- if first_author %}
+  <meta name="author" content="{{ first_author }}" />
+  {%- if config.extra.authors[first_author].fediverse %}
+    <meta name="fediverse:creator" content="{{ config.extra.authors[first_author].fediverse }}" />
+  {%- endif %}
 {%- endif %}
   <meta name="copyright" content="{{ config.title }}" />
 

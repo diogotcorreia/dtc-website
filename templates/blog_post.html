@@ -2,7 +2,7 @@
 
 {%- block head %}
 {{ super() }}
-{{- macros_seo::seo(config=config, title=page.title, description=page.summary | striptags | trim) }}
+{{- macros_seo::seo(config=config, title=page.title, description=page.summary | striptags | trim, authors=page.authors) }}
 {%- set section = get_section(path=page.ancestors | last) %}
 {%- if section.generate_feeds -%}
   {%- for feed in config.feed_filenames -%}
