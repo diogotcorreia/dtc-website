@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "zola build"
+command = "zola build --minify"
 
 [build.environment]
 ZOLA_VERSION = "0.22.1"
