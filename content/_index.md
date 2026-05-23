@@ -423,4 +423,30 @@ As part of this work, I developed a [Chromium fork](https://github.com/diogotcor
 to detect prototype pollution gadgets when a vulnerable website is visited.
 """
 
+[[extra.timeline]]
+title = "ECSC 2024"
+subtitle = "In-Person CTF Competition"
+date = "October 2024"
+icon = "/assets/icons/flag.svg"
+background = "#0086cd"
+foreground = "#fff"
+content = """
+In 2024 I qualified for the first time to represent Portugal in the
+[European Cybersecurity Challenge](https://ecsc.eu/)
+in Torino, Italy.
+"""
+
+[[extra.timeline]]
+title = "ECSC 2025"
+subtitle = "In-Person CTF Competition"
+date = "October 2025"
+icon = "/assets/icons/flag.svg"
+background = "#0086cd"
+foreground = "#fff"
+content = """
+In 2025 I qualified again to represent Portugal in the
+[European Cybersecurity Challenge](https://ecsc.eu/),
+this time in Warsaw, Poland.
+"""
+
 +++
