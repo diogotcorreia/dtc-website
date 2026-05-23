@@ -449,4 +449,20 @@ In 2025 I qualified again to represent Portugal in the
 this time in Warsaw, Poland.
 """
 
+[[extra.timeline]]
+title = "Master's Thesis"
+subtitle = "Classa: Uncovering Class Pollution in Python"
+date = "October 2025"
+icon = "/assets/icons/kth.svg"
+background = "#004791"
+foreground = "#fff"
+content = """
+For my [Master's Thesis](https://s.diogotc.com/thesis-pdf)
+I have built a static analysis tool
+that can detect Class Pollution in Python programs and libraries.
+This tool was then run on 3000 real-world python projects,
+resulting in the discovery of the critical-severity vulnerability
+[CVE-2025-58367](https://github.com/advisories/GHSA-mw26-5g2v-hqw3).
+"""
+
 +++
