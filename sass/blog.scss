@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use 'sass:color';
 
 html, body {
   height: 100%;
@@ -193,6 +194,33 @@ details {
   summary {
     cursor: pointer;
     outline: none;
+  }
+}
+
+.footnote-definition {
+  position: relative;
+  margin-left: 1em;
+
+  &:nth-child(1 of .footnote-definition) {
+    margin-top: 8em;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -1em;
+      left: -1em;
+      width: 10em;
+      max-width: 90%;
+      height: 1px;
+      background: color.scale($textColor, $lightness: -50%);
+    }
+  }
+
+  .footnote-definition-label {
+    position: absolute;
+    top: -0.25em;
+    left: -1em;
   }
 }
 
